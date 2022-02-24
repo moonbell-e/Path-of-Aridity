@@ -8,6 +8,10 @@ using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject _playButton;
+    [SerializeField] private GameObject _newGameButton;
+
+
     [Header("Volume Settings")]
     [SerializeField] private Slider _volumeSlider;
     [SerializeField] private float _defaultVolume = 1.0f;
@@ -24,35 +28,48 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
     private Resolution[] _resolutions;
 
+
     private int _qualityLevel;
     private bool _isFullScreen;
 
     private void Start()
     {
-        _resolutions = Screen.resolutions;
-
-        List<string> _options = new List<string>();
-
-        int _currentResolutionIndex = 0;
-
-        for (int i = 0; i < _resolutions.Length; i++)
+        if(PlayerPrefs.HasKey("NewGameStarted"))
         {
-            string _option = _resolutions[i].width + " x " + _resolutions[i].height;
-            _options.Add(_option);
-            Debug.Log("Added");
-            if (_resolutions[i].width == Screen.width && _resolutions[i].height == Screen.height)
-                _currentResolutionIndex = i;
+            _playButton.SetActive(true);
+            Destroy(_newGameButton);
         }
 
-        _resolutionDropdown.AddOptions(_options);
-        _resolutionDropdown.value = _currentResolutionIndex;
-        _resolutionDropdown.RefreshShownValue();
+
+        if (!PlayerPrefs.HasKey("AddedResolutions"))
+        {
+            _resolutions = Screen.resolutions;
+
+            List<string> _options = new List<string>();
+
+            int _currentResolutionIndex = 0;
+
+            for (int i = 0; i < _resolutions.Length; i++)
+            {
+                string _option = _resolutions[i].width + " x " + _resolutions[i].height + " " + _resolutions[i].refreshRate + " Hz";
+                _options.Add(_option);
+                Debug.Log("Added");
+                if (_resolutions[i].width == Screen.width && _resolutions[i].height == Screen.height)
+                    _currentResolutionIndex = i;
+            }
+
+            _resolutionDropdown.AddOptions(_options);
+            _resolutionDropdown.value = _currentResolutionIndex;
+            _resolutionDropdown.RefreshShownValue();
+        }
     }
+
 
 
 
     public void StartingNewGame()
     {
+        //PlayerPrefs.SetInt("AddedResolutions", 1);
         SceneManager.LoadScene(_newGameLevel);
     }
 
