@@ -17,10 +17,10 @@ namespace Player
             instance = this;
             Counter++; if (Counter > 1) Debug.LogError("Two PlayerHandlers on the scene!");
 
-            UnitHandler.instance.SetUnitStats(Units);
         }
         private void Update()
         {
+            UnitHandler.instance.SetUnitStats(Units);
             InputHandler.instance.HandleUnitMovement();
         }
     }
