@@ -3,7 +3,9 @@ using UnityEngine.UI;
 
 namespace Battle.Resolve
 {
-    public class Resolve : MonoBehaviour
+    public delegate void ValueChanged(int value);
+    
+    public class ResolveBar : MonoBehaviour
     {
         public event ValueChanged ResolveChanged;
         [SerializeField]
@@ -26,7 +28,5 @@ namespace Battle.Resolve
             ResolveChanged?.Invoke(_resolve);
         }
     }
-
-    public delegate void ValueChanged(int value);
 }
 
