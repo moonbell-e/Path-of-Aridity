@@ -24,13 +24,13 @@ namespace Units
             Unit unit;
             switch(type)
             {
-                case "rangeWarrior":
+                case "RangeW":
                     unit = _rangeWarrior;
                     break;
-                case "meleeWarrior":
+                case "MeleeW":
                     unit = _meleeWarrior;
                     break;
-                case "playerWarrior":
+                case "Player":
                     unit = _playerWarrior;
                     break;
                 default:
@@ -45,9 +45,9 @@ namespace Units
         {
             foreach(Transform unit in type)
             {
-                string unitName = unit.name;
+                string unitName = unit.name.Substring(0, 6);
                 var stats = GetUnitStats(unitName);
-                Player.PlayerUnit playerUnit = unit.GetComponent<Player.PlayerUnit>();
+                PlayerUnit playerUnit = unit.GetComponent<PlayerUnit>();
 
                 playerUnit.Cost = stats.cost;
                 playerUnit.Health = stats.health;
