@@ -4,13 +4,13 @@ using TMPro;
 
 namespace Battle.Units
 {
+    public delegate void SendUnit(Unit unit);
+
     public abstract class Unit : MonoBehaviour
     {
-        [SerializeField]
-        protected bool _active;
-        [SerializeField]
-        protected Slider _healthBar; 
-        protected TextMeshProUGUI _curHealthText; 
+        public event SendUnit UnitDied;
+        private HealthBarInitializer _healthBarInitializer;
+        protected HealthBar _healthBar;
         [SerializeField]
         protected int _maxHealth;
         [SerializeField]
@@ -18,18 +18,12 @@ namespace Battle.Units
 
         public int MaxHealth => _maxHealth;
         public int CurHealth => _curHealth;
-
+        
         protected void InitilizeHealth()
         {
-            Vector3 healthBarPosition = transform.position;
-            healthBarPosition = Camera.main.WorldToScreenPoint(healthBarPosition);
-            healthBarPosition.y -= 75;
-            _healthBar.transform.position = healthBarPosition;
-            _healthBar.maxValue = _maxHealth;
-            _healthBar.value = _curHealth;
-            _curHealthText = _healthBar.GetComponentInChildren<TextMeshProUGUI>();
-            _curHealthText.text = _curHealth.ToString();
-            _healthBar.gameObject.SetActive(true);
+            if(_healthBarInitializer == null) 
+                _healthBarInitializer = FindObjectOfType<HealthBarInitializer>();
+            _healthBar = _healthBarInitializer.InitilizeHealthBar(_maxHealth, _curHealth, transform.position);
         }
 
         public virtual void ChangeHealth(int value)
@@ -37,14 +31,19 @@ namespace Battle.Units
             _curHealth += value;
             if(_curHealth > _maxHealth) _curHealth = _maxHealth;
             if(_curHealth <= 0) Death();
-            _curHealthText.text = _curHealth.ToString();
-            _healthBar.value = _curHealth;
+            _healthBar.ChangeHealth(_curHealth);
         } 
 
-        public virtual void Death()
+        protected virtual void Death()
         {
             Debug.Log("Unit " + gameObject.name + " dead");
-            _healthBar.gameObject.SetActive(false);
+            UnitDied?.Invoke(this);
+            HideUnit();
+        }
+
+        public virtual void HideUnit()
+        {
+            if(_healthBar != null) _healthBar.HideBar();
             gameObject.SetActive(false);
         }
     }

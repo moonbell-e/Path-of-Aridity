@@ -1,5 +1,6 @@
 using UnityEngine;
 using Battle.Units;
+using Battle.Controller;
 
 namespace Battle.Spells
 {
@@ -14,7 +15,7 @@ namespace Battle.Spells
                     stateEvent?.Invoke(false);
                     return;
                 }
-                foreach(Undead undead in unitsKeeper.AllUndeads())
+                foreach(Undead undead in unitsKeeper.Units<Undead>())
                     undead.ChangeHealth(spell.Damage);
                 stateEvent?.Invoke(true);
             }
@@ -25,9 +26,8 @@ namespace Battle.Spells
                     stateEvent?.Invoke(false);
                     return;
                 }
-                foreach(Guard guard in unitsKeeper.AllGuards())
+                foreach(Guard guard in unitsKeeper.Units<Guard>())
                     guard.ChangeHealth(spell.Damage);
-                stateEvent?.Invoke(true);
             }
         }
     }

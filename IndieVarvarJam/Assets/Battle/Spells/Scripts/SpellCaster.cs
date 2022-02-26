@@ -1,5 +1,5 @@
 using UnityEngine;
-using Battle.Units;
+using Battle.Controller;
 
 namespace Battle.Spells
 {

@@ -5,13 +5,13 @@ namespace Battle.Skills
 {
     public class SkillBarInitializer : MonoBehaviour
     {
-        [SerializeField]
-        private List<SkillBar> _skillBars;
+        private SkillBar[] _skillBars;
         [SerializeField]
         private GameObject _skillCell;
 
         private void Awake()
         { 
+            _skillBars = FindObjectsOfType<SkillBar>();
             foreach(SkillBar skillBar in _skillBars)
                 skillBar.HideBar();
         }

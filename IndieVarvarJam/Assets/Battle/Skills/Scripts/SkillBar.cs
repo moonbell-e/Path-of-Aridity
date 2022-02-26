@@ -20,7 +20,6 @@ namespace Battle.Skills
             _spellCombinator = FindObjectOfType<SpellCombinator>();
             _spellCombinator.SpellUsed += DisableUsedCells;
             _spellCombinator.SpellCanceled += UnselectChoosedCells;
-            HideBar();
         }
         
         public void SetPosition(Vector3 position)

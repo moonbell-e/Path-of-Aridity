@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Units;
 using Battle.Skills;
+using Battle.Controller;
 
 namespace Battle.Units
 {
@@ -14,37 +15,31 @@ namespace Battle.Units
         [SerializeField]
         private int _skillCellsCount;
         private MeshFilter _meshFilter;
+        private MeshRenderer _meshRenderer;
 
         private void Awake()
         {
             _skillBarInitializer = FindObjectOfType<SkillBarInitializer>();
             _meshFilter = GetComponent<MeshFilter>();
-            if(_active == false)
-            {
-                Death();
-                return;
-            }
-            InitilizeHealth();
-            _skillBar = _skillBarInitializer.InitilizeSkillBar(_skillCellsCount, transform.position);
+            _meshRenderer = GetComponent<MeshRenderer>();
         }
 
-        private void Start() 
-        {
-            RollSkill();
-        }
-
-        public void Initialize(Mesh mesh, int maxHealth, int curHealth, List<UnitSkills> skills, int skillCellsCount)
+        public void Initialize(Mesh mesh, Material material, int maxHealth, int curHealth, List<UnitSkills> skills, int skillCellsCount)
         {
             _meshFilter.mesh = mesh;
+            _meshRenderer.material = material;
             gameObject.SetActive(true);
             
             _skills = skills;
             _skillCellsCount = skillCellsCount;
             _skillBar = _skillBarInitializer.InitilizeSkillBar(skillCellsCount, transform.position);
+            FindObjectOfType<EndTurnButton>().TurnEnded += RollSkill;
 
             _maxHealth = maxHealth;
             _curHealth = curHealth;
             InitilizeHealth();
+
+            RollSkill();
         }
         
         public void RollSkill()
@@ -63,11 +58,16 @@ namespace Battle.Units
             base.ChangeHealth(value);
         }
 
-        public override void Death()
+        protected override void Death()
         {
+            FindObjectOfType<EndTurnButton>().TurnEnded -= RollSkill;
             base.Death();
-            if(_skillBar == null) return;
-            _skillBar.HideBar();
+        }
+
+        public override void HideUnit()
+        {
+            if(_skillBar != null) _skillBar.HideBar();
+            base.HideUnit();
         }
     }
 }

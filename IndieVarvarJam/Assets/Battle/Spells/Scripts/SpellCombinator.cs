@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Units;
 using UnityEngine.UI;
 using TMPro;
+using Battle.Controller;
 
 namespace Battle.Spells
 {
@@ -32,6 +33,7 @@ namespace Battle.Spells
             _spellCaster = FindObjectOfType<SpellCaster>();
             _spellCaster.SpellUseState += ClearSpellData;
             ClearSpellData(false);
+            FindObjectOfType<EndTurnButton>().TurnEnded += ClearSpellData;
         }
 
         public bool SetSkill(UnitSkills skill)
@@ -79,6 +81,11 @@ namespace Battle.Spells
                     _curSpell = spell;
                     ChangeSpellCastAvailability(true);
                 }    
+        }
+
+        public void ClearSpellData()
+        {
+            ClearSpellData(false);
         }
 
         public void ClearSpellData(bool spellCasted)

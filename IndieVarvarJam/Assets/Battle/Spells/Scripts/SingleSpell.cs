@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Battle.Units;
+using Battle.Controller;
 
 namespace Battle.Spells
 {
@@ -24,7 +25,7 @@ namespace Battle.Spells
             {
                 if(spell.DamageType == DamageType.Heal)
                 {
-                    List<Guard> guards = unitsKeeper.AllGuards();
+                    List<Guard> guards = unitsKeeper.Units<Guard>();
                     foreach(Guard guard in guards)
                         if(guard.MaxHealth == guard.CurHealth) guards.Remove(guard);
                     if(guards.Count > 0)
@@ -32,14 +33,14 @@ namespace Battle.Spells
                         int index = (Random.Range(0, guards.Count));
                         guards[index].ChangeHealth(spell.Damage);
                     }
-                    _stateEvent?.Invoke(true);
                 }
                 else
                 {
-                    List<Undead> undeads = unitsKeeper.AllUndeads();
+                    List<Undead> undeads = unitsKeeper.Units<Undead>();
+                    if(undeads.Count == 0) return;
                     int index = (Random.Range(0, undeads.Count));
-                    undeads[index].ChangeHealth(spell.Damage);
-                    _stateEvent?.Invoke(true);
+                    Debug.Log(undeads[index]);
+                    undeads[index].ChangeHealth(-spell.Damage);
                 }
             }
         }

@@ -2,6 +2,7 @@ using UnityEngine;
 using Battle.Units;
 using Battle.Resolve;
 using System.Collections.Generic;
+using Battle.Controller;
 
 namespace Battle.Spells
 {
@@ -16,7 +17,7 @@ namespace Battle.Spells
         
         public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, bool playerCast, SendState stateEvent)
         {
-            List<Unit> units = unitsKeeper.AllUnits();
+            List<Unit> units = unitsKeeper.Units<Unit>();
             switch(spell.DamageType)
             {
                 case DamageType.Mental:
@@ -34,7 +35,7 @@ namespace Battle.Spells
                     unit.ChangeHealth(spell.Damage);
                 break;
             }
-            stateEvent?.Invoke(true);
+            if(playerCast) stateEvent?.Invoke(true);
         }
     }
 }

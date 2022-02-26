@@ -3,20 +3,24 @@ using UnityEngine.UI;
 
 namespace Battle.Resolve
 {
-    public delegate void ValueChanged(int value);
-    
     public class ResolveBar : MonoBehaviour
     {
-        public event ValueChanged ResolveChanged;
-        [SerializeField]
         private Slider _resolveBar;
-        [SerializeField]
         private int _resolve;
+
+        public int Resolve => _resolve;
 
         private void Awake() 
         {
-            _resolve = 50;
-            ChangeResolve(0);
+            _resolveBar = GetComponent<Slider>();
+        }
+
+        public void InitializeResolve(int resolve)
+        {
+            _resolve = resolve;
+            if(_resolve > 100) _resolve = 100;
+            if(_resolve < 0) _resolve = 0;
+            _resolveBar.value = _resolve;
         }
 
         public void ChangeResolve(int value)
@@ -25,7 +29,6 @@ namespace Battle.Resolve
             if(_resolve > 100) _resolve = 100;
             if(_resolve < 0) _resolve = 0;
             _resolveBar.value = _resolve;
-            ResolveChanged?.Invoke(_resolve);
         }
     }
 }
