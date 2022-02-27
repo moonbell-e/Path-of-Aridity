@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8254388002747208237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Sword_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Sword_fire
+  Guid:
+    Data1: 671380927
+    Data2: 1239452503
+    Data3: -736064877
+    Data4: 228801845
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2242
 --- !u!114 &-7157232260559612012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +78,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6539533742815217596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Shield_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Shield_necro
+  Guid:
+    Data1: 900772758
+    Data2: 1082933385
+    Data3: -1296086637
+    Data4: 328258085
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2864
 --- !u!114 &-6397445315760583365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,10 +119,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/poison_rain
   Guid:
-    Data1: 976141978
-    Data2: 1275335866
-    Data3: 1610367129
-    Data4: 618558256
+    Data1: -1422502069
+    Data2: 1098088339
+    Data3: 1663914126
+    Data4: 1730475154
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -77,7 +131,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 0
 --- !u!114 &-5952521859057103468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,10 +146,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/rain_necro
   Guid:
-    Data1: -1512105492
-    Data2: 1195910521
-    Data3: -837708119
-    Data4: 1383702998
+    Data1: -836003264
+    Data2: 1243333682
+    Data3: -1542357341
+    Data4: 2112180748
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -104,7 +158,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 1979
 --- !u!114 &-5665164856783869780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +186,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3956
+--- !u!114 &-5620084089610651484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Shield_ice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Shield_ice
+  Guid:
+    Data1: 1677912541
+    Data2: 1117119419
+    Data3: -1286488648
+    Data4: 889753262
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2242
+--- !u!114 &-5397818356699553898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Shield_poison
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Shield_poison
+  Guid:
+    Data1: 1331208472
+    Data2: 1101982113
+    Data3: 1918015394
+    Data4: -1167223650
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2998
 --- !u!114 &-5353602756907343540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,10 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/ice_necro
   Guid:
-    Data1: -589767819
-    Data2: 1073834635
-    Data3: -129284479
-    Data4: -41937944
+    Data1: 597408340
+    Data2: 1149879410
+    Data3: 1760995517
+    Data4: 908732733
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -158,7 +266,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 0
 --- !u!114 &-5260634532221030777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,10 +281,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/necro_necro
   Guid:
-    Data1: -322991729
-    Data2: 1277854780
-    Data3: -1758194765
-    Data4: 1041823237
+    Data1: 506882273
+    Data2: 1079480246
+    Data3: -1116774524
+    Data4: -1453450312
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -185,7 +293,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 3454
 --- !u!114 &-4634231721452353671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,10 +335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/poison_fire
   Guid:
-    Data1: 1025381169
-    Data2: 1075033515
-    Data3: 1143018145
-    Data4: -902058330
+    Data1: 1707445132
+    Data2: 1290083352
+    Data3: 1341993358
+    Data4: 916237798
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -239,7 +347,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 0
 --- !u!114 &-3203779297420644645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,10 +470,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/rain_fire
   Guid:
-    Data1: -645187453
-    Data2: 1153599875
-    Data3: -892179276
-    Data4: 760148414
+    Data1: 1606881882
+    Data2: 1263114448
+    Data3: 1543903374
+    Data4: 1555581391
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -374,7 +482,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 2104
+--- !u!114 &-1446043147005734146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Sword_sword
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Sword_sword
+  Guid:
+    Data1: 1557799825
+    Data2: 1340615696
+    Data3: -872813947
+    Data4: -1114367265
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 673
 --- !u!114 &-1430191479555094341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,10 +575,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/ice_fire
   Guid:
-    Data1: 1622878386
-    Data2: 1334133537
-    Data3: 1971265931
-    Data4: -1838712621
+    Data1: -589576300
+    Data2: 1111768643
+    Data3: 1212119740
+    Data4: -1222243698
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -452,7 +587,88 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 1451
+--- !u!114 &-1073251255028863541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Shield_rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Shield_rain
+  Guid:
+    Data1: 1331118154
+    Data2: 1187183082
+    Data3: -1413345135
+    Data4: 475671049
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3161
+--- !u!114 &-1008609850930905388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Sword_poison
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Sword_poison
+  Guid:
+    Data1: 1398102587
+    Data2: 1210005251
+    Data3: -1314772093
+    Data4: -247329459
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1831
+--- !u!114 &-614885667986075495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Shield_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Shield_fire
+  Guid:
+    Data1: -2008296543
+    Data2: 1184884632
+    Data3: 2024412065
+    Data4: 135651358
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-562887761232637944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +696,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1831
+--- !u!114 &-446436209234305114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Sword_ice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Sword_ice
+  Guid:
+    Data1: 1065552939
+    Data2: 1336305975
+    Data3: 1205038750
+    Data4: 1844367429
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2400
+--- !u!114 &-275522344039593534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/fight
+  m_EditorClassIdentifier: 
+  Name: fight
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,26 +765,16 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 934358273909818226}
   - {fileID: 3144250161130575725}
-  - {fileID: 3274365276329281508}
   - {fileID: 5501920151563225422}
-  - {fileID: -5665164856783869780}
-  - {fileID: 3762240762887412805}
   - {fileID: 888606660786739919}
   - {fileID: 1103982015130549679}
   - {fileID: -4585997167540219639}
   - {fileID: -4634231721452353671}
-  - {fileID: 4810790436639416903}
-  - {fileID: -562887761232637944}
-  - {fileID: -3136918307077106794}
   - {fileID: -1971375585447851370}
   - {fileID: -5353602756907343540}
   - {fileID: -1768327673166822518}
-  - {fileID: 10491994508368658}
   - {fileID: -5260634532221030777}
   - {fileID: 777790994837736964}
-  - {fileID: -3203779297420644645}
-  - {fileID: 719194110353563585}
-  - {fileID: 4100009518160599480}
   - {fileID: 6137534080970148312}
   - {fileID: -6397445315760583365}
   - {fileID: 5253842592272815076}
@@ -527,20 +784,29 @@ MonoBehaviour:
   - {fileID: -1244015607012122650}
   - {fileID: -7157232260559612012}
   - {fileID: 8391157360092371141}
-  - {fileID: 1179603123904299732}
-  - {fileID: 957078591862162933}
   - {fileID: -5952521859057103468}
-  - {fileID: 6302274293402574021}
   - {fileID: 667888286151966367}
   - {fileID: 6850654298111336953}
-  - {fileID: 1226627921387556995}
   - {fileID: 2006084744617308447}
+  - {fileID: -5397818356699553898}
+  - {fileID: -446436209234305114}
+  - {fileID: -1008609850930905388}
+  - {fileID: -1073251255028863541}
+  - {fileID: 5299522988801998007}
+  - {fileID: -1446043147005734146}
+  - {fileID: -6539533742815217596}
+  - {fileID: -614885667986075495}
+  - {fileID: 4996639828406114301}
+  - {fileID: 4585832008995940409}
+  - {fileID: -8254388002747208237}
+  - {fileID: -5620084089610651484}
+  - {fileID: 5214736600861236433}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3168748423980658530}
   StringsBanks:
   - {fileID: 6974174763509739375}
-  cacheTime: 637815325014953705
+  cacheTime: 637815759827265987
   cacheVersion: 9
 --- !u!114 &10491994508368658
 MonoBehaviour:
@@ -583,10 +849,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/poison_ice
   Guid:
-    Data1: -1222366816
-    Data2: 1310727907
-    Data3: -1140258886
-    Data4: -174003631
+    Data1: -1250718253
+    Data2: 1155725680
+    Data3: -549186636
+    Data4: 1412464616
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -595,7 +861,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 0
 --- !u!114 &667888286151966367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,10 +876,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/ice_ice
   Guid:
-    Data1: 1918652408
-    Data2: 1337634722
-    Data3: 1308149948
-    Data4: 160350247
+    Data1: -39101959
+    Data2: 1290836434
+    Data3: 1677836944
+    Data4: -1983200034
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -622,7 +888,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 1276
 --- !u!114 &719194110353563585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,10 +930,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/rain_rain
   Guid:
-    Data1: 1398568080
-    Data2: 1129110570
-    Data3: -1507691083
-    Data4: 790606
+    Data1: 791360889
+    Data2: 1228750535
+    Data3: 675843468
+    Data4: -1297876842
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -676,7 +942,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 2366
 --- !u!114 &888606660786739919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +1048,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6704639119594478597}
+  - {fileID: -275522344039593534}
   MinDistance: 1
   MaxDistance: 20
   Length: 72000
@@ -908,10 +1174,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/fire_necro
   Guid:
-    Data1: -1465158127
-    Data2: 1322384962
-    Data3: 1517794448
-    Data4: 956162787
+    Data1: 1727883138
+    Data2: 1308451363
+    Data3: -1683236679
+    Data4: -1315346047
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -920,7 +1186,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 1521
 --- !u!114 &3168748423980658530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,7 +1202,7 @@ MonoBehaviour:
   Path: Assets/FMOD_BANKS/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637815325014927106
+  lastModified: 637815759827214664
   FileSizes: []
   Exists: 1
 --- !u!114 &3274365276329281508
@@ -1047,6 +1313,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1274
+--- !u!114 &4585832008995940409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Sword_rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Sword_rain
+  Guid:
+    Data1: 1252962735
+    Data2: 1086701216
+    Data3: -1702510943
+    Data4: -2055297571
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3089
 --- !u!114 &4810790436639416903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,6 +1367,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1274
+--- !u!114 &4996639828406114301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Sword_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Sword_necro
+  Guid:
+    Data1: 639600815
+    Data2: 1141569178
+    Data3: -768504912
+    Data4: 1947462022
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2702
+--- !u!114 &5214736600861236433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Sword_shield
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Sword_shield
+  Guid:
+    Data1: 2102639845
+    Data2: 1130507606
+    Data3: -942508649
+    Data4: 832916188
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2998
 --- !u!114 &5253842592272815076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,10 +1435,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/rain_ice
   Guid:
-    Data1: 1157231005
-    Data2: 1196812464
-    Data3: -1547495789
-    Data4: 990741318
+    Data1: -131981322
+    Data2: 1335683521
+    Data3: 1802998681
+    Data4: 2064687874
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -1100,7 +1447,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 2204
+--- !u!114 &5299522988801998007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/Shield_shield
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/Shield_shield
+  Guid:
+    Data1: 1014441049
+    Data2: 1100335082
+    Data3: -1037026369
+    Data4: -120020161
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3956
 --- !u!114 &5501920151563225422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,10 +1489,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/fire_fire
   Guid:
-    Data1: -1483224301
-    Data2: 1249732157
-    Data3: 1565491614
-    Data4: -1914390678
+    Data1: -1017822313
+    Data2: 1101707629
+    Data3: -1491507281
+    Data4: -941336801
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -1127,7 +1501,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 1701
 --- !u!114 &6137534080970148312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,10 +1598,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/combinations/poison_necro
   Guid:
-    Data1: 1903691001
-    Data2: 1218097857
-    Data3: 272979353
-    Data4: -1834754094
+    Data1: -1703478320
+    Data2: 1316473366
+    Data3: -748678262
+    Data4: 147194247
   Banks:
   - {fileID: 3168748423980658530}
   IsStream: 0
@@ -1236,7 +1610,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1274
+  Length: 2004
 --- !u!114 &6974174763509739375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,10 +1626,10 @@ MonoBehaviour:
   Path: Assets/FMOD_BANKS/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637815325014953705
+  lastModified: 637815759827265987
   FileSizes:
   - Name: 
-    Value: 2680
+    Value: 2642
   Exists: 1
 --- !u!114 &8391157360092371141
 MonoBehaviour:
