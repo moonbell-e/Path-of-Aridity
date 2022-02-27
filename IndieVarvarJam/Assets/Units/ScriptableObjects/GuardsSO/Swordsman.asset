@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2382797af05cdba4dab0c0f290f39dd5, type: 3}
-  m_Name: MeleeWarrior
+  m_Script: {fileID: 11500000, guid: 05e6ccb1f06f1f24aa986d502206a350, type: 3}
+  m_Name: Swordsman
   m_EditorClassIdentifier: 
-  Type: 1
   UnitPrefab: {fileID: 6280307186923322265, guid: 304398763dba9a749ab4a19fb11566cc, type: 3}
+  Health: 5
   UnitSkills:
-  - {fileID: 11400000, guid: a994e0060b43a054c83637669ee06d7c, type: 2}
-  - {fileID: 11400000, guid: 661d599f8a277704e8ec5459c4f9b975, type: 2}
-  Health: 3
-  Cost: 5
-  SkillCellsCount: 2
+  - {fileID: 11400000, guid: 6c45f60089494cf498ebf51ae3ede0d1, type: 2}
+  - {fileID: 11400000, guid: 24904c027b60332459ff2d4f8921d79d, type: 2}

@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2242
+--- !u!114 &-8130337011860175240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/fight
+  m_EditorClassIdentifier: 
+  Name: fight
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7157232260559612012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +237,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2242
+--- !u!114 &-5405872685608389556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/enemy_skills/enemy_rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/enemy_skills/enemy_rain
+  Guid:
+    Data1: 1778330935
+    Data2: 1287470627
+    Data3: -252719430
+    Data4: 1616784897
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2366
 --- !u!114 &-5397818356699553898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,12 +852,16 @@ MonoBehaviour:
   - {fileID: -8254388002747208237}
   - {fileID: -5620084089610651484}
   - {fileID: 5214736600861236433}
+  - {fileID: 9025475648785185687}
+  - {fileID: -5405872685608389556}
+  - {fileID: 5765471133790293752}
+  - {fileID: 4948359492022810533}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3168748423980658530}
   StringsBanks:
   - {fileID: 6974174763509739375}
-  cacheTime: 637815759827265987
+  cacheTime: 637815803862794202
   cacheVersion: 9
 --- !u!114 &10491994508368658
 MonoBehaviour:
@@ -1048,7 +1103,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -275522344039593534}
+  - {fileID: -8130337011860175240}
   MinDistance: 1
   MaxDistance: 20
   Length: 72000
@@ -1202,7 +1257,7 @@ MonoBehaviour:
   Path: Assets/FMOD_BANKS/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637815759827214664
+  lastModified: 637815803862734898
   FileSizes: []
   Exists: 1
 --- !u!114 &3274365276329281508
@@ -1367,6 +1422,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1274
+--- !u!114 &4948359492022810533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/enemy_skills/enemy_sword
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/enemy_skills/enemy_sword
+  Guid:
+    Data1: -498352039
+    Data2: 1280170603
+    Data3: -1871004225
+    Data4: -2035209437
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 673
 --- !u!114 &4996639828406114301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,6 +1584,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1701
+--- !u!114 &5765471133790293752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/enemy_skills/enemy_arrow
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/enemy_skills/enemy_arrow
+  Guid:
+    Data1: 263276099
+    Data2: 1328569339
+    Data3: 703027334
+    Data4: 1558049049
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1238
 --- !u!114 &6137534080970148312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1626,10 +1735,10 @@ MonoBehaviour:
   Path: Assets/FMOD_BANKS/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637815759827265987
+  lastModified: 637815803862794202
   FileSizes:
   - Name: 
-    Value: 2642
+    Value: 2936
   Exists: 1
 --- !u!114 &8391157360092371141
 MonoBehaviour:
@@ -1658,3 +1767,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 297
+--- !u!114 &9025475648785185687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/enemy_skills/enemy_shield
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/enemy_skills/enemy_shield
+  Guid:
+    Data1: -8433381
+    Data2: 1165341401
+    Data3: 2116165560
+    Data4: -1340622821
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2998

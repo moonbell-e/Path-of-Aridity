@@ -16,6 +16,7 @@ namespace Battle.Controller
         private Camera _worldCamera;
         [SerializeField]
         private BattleData _battleData;
+        private PauseManager _pauseManager;
         private UnitsKeeper _unitsKeeper;
         private ResolveBar _resolveBar;
 
@@ -23,7 +24,7 @@ namespace Battle.Controller
         {
             _unitsKeeper = FindObjectOfType<UnitsKeeper>();
             _resolveBar = FindObjectOfType<ResolveBar>();
-            FindObjectOfType<BattleReferee>().BattleWin += EndBattle;
+            _pauseManager = FindObjectOfType<PauseManager>();
             foreach(GameObject obj in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
                 {
                     var battleEvent = obj.GetComponent<IBattleEvent>();
@@ -35,13 +36,14 @@ namespace Battle.Controller
             EndBattle();    
         }
 
-        private void EndBattle()
+        public void EndBattle()
         {
             _battleCamera.enabled = false;
             _worldCamera.enabled = true;
             _unitsKeeper.DeactivateAllUnits();
             _battleField.SetActive(false);
             _battleWindow.SetActive(false);
+            _pauseManager.ResumeClicked();
         }
 
         private void Update() 
@@ -55,13 +57,13 @@ namespace Battle.Controller
 
         public void InitializeBattle(BattleData battleData)
         {
+            _pauseManager.PauseClicked();
             _battleField.SetActive(true);
             _battleWindow.SetActive(true);
             _battleCamera.enabled = true;
             _worldCamera.enabled = false;
             _unitsKeeper.InitializeUnits(battleData.LoadUndeadsData, battleData.LoadGuardsData);
             _resolveBar.InitializeResolve(battleData.StartResolve);
-            
         }
     }
 }
