@@ -28,17 +28,17 @@ namespace Battle.Group
             }
         }
 
-        [ContextMenu ("Finf spells")]
-        private void FindSpells()
-        {
-            string[] spellsGUID = AssetDatabase.FindAssets("t:GuardSO", new[] {"Assets/Units/ScriptableObjects/GuardsSO"});
-            List<string> spellPaths = new List<string>();
-            foreach(string GUID in spellsGUID)
-                spellPaths.Add(AssetDatabase.GUIDToAssetPath(GUID));
-            _guardsSO = new List<GuardSO>();
-            foreach(string path in spellPaths)
-                _guardsSO.Add(AssetDatabase.LoadAssetAtPath(path, typeof(GuardSO)) as GuardSO);;
-        }
+        // [ContextMenu ("Finf guards")]
+        // private void FindGuards()
+        // {
+        //     string[] spellsGUID = AssetDatabase.FindAssets("t:GuardSO", new[] {"Assets/Units/ScriptableObjects/GuardsSO"});
+        //     List<string> spellPaths = new List<string>();
+        //     foreach(string GUID in spellsGUID)
+        //         spellPaths.Add(AssetDatabase.GUIDToAssetPath(GUID));
+        //     _guardsSO = new List<GuardSO>();
+        //     foreach(string path in spellPaths)
+        //         _guardsSO.Add(AssetDatabase.LoadAssetAtPath(path, typeof(GuardSO)) as GuardSO);;
+        // }
 
         public void StartBattle(List<LoadUndeadData> loadUndeadsData)
         {
@@ -49,8 +49,8 @@ namespace Battle.Group
 
         public void AddGuard(GuardSO guard)
         {
-            _loadGuardsData.Add(new LoadGuardData(guard.UnitPrefab.GetComponent<MeshFilter>().mesh,
-            guard.UnitPrefab.GetComponent<MeshRenderer>().material, guard.Health, guard.UnitSkills));
+            _loadGuardsData.Add(new LoadGuardData(guard.UnitPrefab.GetComponent<MeshFilter>().sharedMesh,
+            guard.UnitPrefab.GetComponent<MeshRenderer>().sharedMaterial, guard.Health, guard.UnitSkills));
         }
 
         public void ClearGroup()

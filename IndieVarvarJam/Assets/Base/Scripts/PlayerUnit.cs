@@ -18,6 +18,9 @@ namespace Player
         public int Health, Cost;
 
         public List<UnitSkills> UnitSkills;
+        
+        public Unit Undead;
+
         private void Start()
         {
             _animator = GetComponent<Animator>();

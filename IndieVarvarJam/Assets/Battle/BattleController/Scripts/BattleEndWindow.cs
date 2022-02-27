@@ -21,6 +21,10 @@ namespace Battle.Controller
             battleReferee.BattleWin += ShowWinScreen;
             battleReferee.BattleLose += ShowLoseScreen;
             _loseButton.onClick.AddListener(FindObjectOfType<PauseManager>().GoToMainMenu);
+        }
+
+        private void Start()
+        {
             HideWindow();
         }
 

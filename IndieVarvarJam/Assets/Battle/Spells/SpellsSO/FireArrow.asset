@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: FireArrow
   m_EditorClassIdentifier: 
   _combination:
-  - {fileID: 11400000, guid: f2229f351b80979479d091591b7787ba, type: 2}
   - {fileID: 11400000, guid: 5f57ea8aa0d782248ad1ae56433b6255, type: 2}
+  - {fileID: 11400000, guid: f2229f351b80979479d091591b7787ba, type: 2}
   _damageType: 0
   _target: 0
   _damage: 3
   _description: "\u041D\u0430\u043D\u043E\u0441\u0438\u0442 3 \u0443\u0440\u043E\u043D\u0430
     \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u043C\u0443 \u0432\u0440\u0430\u0433\u0443."
+  _soundPath:
+    Guid:
+      Data1: 1606881882
+      Data2: 1263114448
+      Data3: 1543903374
+      Data4: 1555581391
+    Path: event:/SFX/combinations/rain_fire

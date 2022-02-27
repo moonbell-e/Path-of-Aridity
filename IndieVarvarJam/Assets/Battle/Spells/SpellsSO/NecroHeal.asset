@@ -20,3 +20,10 @@ MonoBehaviour:
   _damage: 1
   _description: "\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442
     1 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0432\u0441\u0435\u043C \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430\u043C."
+  _soundPath:
+    Guid:
+      Data1: 506882273
+      Data2: 1079480246
+      Data3: -1116774524
+      Data4: -1453450312
+    Path: event:/SFX/combinations/necro_necro

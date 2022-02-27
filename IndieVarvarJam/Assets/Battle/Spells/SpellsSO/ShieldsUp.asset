@@ -20,3 +20,10 @@ MonoBehaviour:
   _damage: 1
   _description: "\u0414\u0430\u0451\u0442 1 \u0437\u0430\u0449\u0438\u0442\u0443
     \u0432\u0441\u0435\u043C \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430\u043C."
+  _soundPath:
+    Guid:
+      Data1: 1014441049
+      Data2: 1100335082
+      Data3: -1037026369
+      Data4: -120020161
+    Path: event:/SFX/combinations/Shield_shield

@@ -25,13 +25,16 @@ namespace Battle.Units
             _slider.maxValue = maxHealth;
             position = Camera.main.WorldToScreenPoint(position);
             position.y -= 75;
+            if(_transform == null) _transform = GetComponent<Transform>();
             _transform.position = position;
+            if(_shieldBar == null) _shieldBar = GetComponentInChildren<ShieldBar>();
             _shieldBar.InitializeShield();
             gameObject.SetActive(true);
         }
 
         public void ChangeHealth(int curHealth)
         {
+            if(_curHealthText == null) _curHealthText = GetComponentInChildren<TextMeshProUGUI>();
             _curHealthText.text = curHealth.ToString();
             _slider.value = curHealth;
         }

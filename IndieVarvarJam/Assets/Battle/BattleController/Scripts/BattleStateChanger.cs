@@ -31,6 +31,7 @@ namespace Battle.Controller
                     if(battleEvent != null) battleEvent.BattleEventStarted += InitializeBattle;
                 }
         }
+        
         private void Start()
         {
             EndBattle();    

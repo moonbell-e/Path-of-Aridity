@@ -20,3 +20,10 @@ MonoBehaviour:
   _damage: 15
   _description: "\u041F\u043E\u043D\u0438\u0436\u0430\u0435\u0442 \u0440\u0435\u0448\u0438\u043C\u043E\u0441\u0442\u044C
     \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u043D\u0430 15."
+  _soundPath:
+    Guid:
+      Data1: -836003264
+      Data2: 1243333682
+      Data3: -1542357341
+      Data4: 2112180748
+    Path: event:/SFX/combinations/rain_necro

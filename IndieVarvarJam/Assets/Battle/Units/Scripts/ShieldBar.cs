@@ -5,6 +5,7 @@ namespace Battle.Units
 {
     public class ShieldBar : MonoBehaviour
     {
+        [SerializeField]
         private TextMeshProUGUI _text;
         private int _shield;
 
@@ -15,7 +16,6 @@ namespace Battle.Units
 
         public void InitializeShield()
         {
-            if(_text == null) _text.GetComponentInChildren<TextMeshProUGUI>();
             _text.text = string.Empty;
             _shield = 0; 
             HideShield();

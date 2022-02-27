@@ -3,6 +3,7 @@ using UnityEngine;
 using Units;
 using Battle.Skills;
 using System.Linq;
+using FMODUnity;
 
 namespace Battle.Spells
 {
@@ -19,11 +20,14 @@ namespace Battle.Spells
         private int _damage;
         [SerializeField] [TextArea (5, 10)]
         private string _description;
+        [SerializeField] 
+        private EventReference _soundPath;
 
         public DamageType DamageType => _damageType;
         public Target Target => _target;
         public int Damage => _damage;
         public string Description => _description;
+        public EventReference SoundPath => _soundPath;
         
         public bool CheckCombination(List<UnitSkills> skills)
         {

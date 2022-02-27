@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e6ccb1f06f1f24aa986d502206a350, type: 3}
   m_Name: Swordsman
   m_EditorClassIdentifier: 
-  UnitPrefab: {fileID: 6280307186923322265, guid: 304398763dba9a749ab4a19fb11566cc, type: 3}
+  UnitPrefab: {fileID: 7964735604628927242, guid: ba4df7532525f3943a819b4412080c31, type: 3}
   Health: 5
   UnitSkills:
   - {fileID: 11400000, guid: 6c45f60089494cf498ebf51ae3ede0d1, type: 2}
