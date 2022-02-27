@@ -33,11 +33,6 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        if(PlayerPrefs.HasKey("NewGameStarted"))
-        {
-            _playButton.SetActive(true);
-        }
-
 
         if (!PlayerPrefs.HasKey("AddedResolutions"))
         {

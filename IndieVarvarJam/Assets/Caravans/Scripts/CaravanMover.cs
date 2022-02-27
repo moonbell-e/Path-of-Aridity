@@ -18,7 +18,7 @@ public class CaravanMover : MonoBehaviour
 
     private void Awake()
     {
-        _speed = 100f;
+        _speed = 1f;
         _step = 0.05f;
         List<Vector3> curvePoints = new List<Vector3>();
         foreach (Transform trf in _curvePoints)
@@ -36,22 +36,16 @@ public class CaravanMover : MonoBehaviour
 
     private void Update()
     {
-        if (_currentWayPointIndex != 19)
-        {
-            if (Vector3.Distance(_transform.position, _wayPoints[_currentWayPointIndex]) < 0.05f)
-            {
-                _currentWayPointIndex++;
-                return;
-            }
-            else
-            {
-                _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
-            }
-        }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        transform.GetChild(0).gameObject.SetActive(false);
+        if (Vector3.Distance(_transform.position, _wayPoints[_currentWayPointIndex]) < 0.05f)
+        {
+            _currentWayPointIndex++;
+            return;
+        }
+        else
+        {
+            _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
+        }
+
     }
 }
