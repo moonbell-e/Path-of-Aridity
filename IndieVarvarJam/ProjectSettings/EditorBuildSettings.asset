@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: b761debe748f9e04195f577b211cbffd
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/JustWalking/TheMainScene.unity
     guid: c7f4d4a606e977043ae77a0ee9bb7c64
   m_configObjects: {}

@@ -18,7 +18,7 @@ public class CaravanMover : MonoBehaviour
 
     private void Awake()
     {
-        _speed = 1f;
+        _speed = 10f;
         _step = 0.05f;
         List<Vector3> curvePoints = new List<Vector3>();
         foreach (Transform trf in _curvePoints)
@@ -44,7 +44,10 @@ public class CaravanMover : MonoBehaviour
         }
         else
         {
-            _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
+            if (_currentWayPointIndex != 19)
+                _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
+            else
+                _transform.position = _wayPoints[0];
         }
 
     }

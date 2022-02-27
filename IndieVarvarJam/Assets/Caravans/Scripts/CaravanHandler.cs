@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class CaravanHandler : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        gameObject.SetActive(false);
-    }
+
 }

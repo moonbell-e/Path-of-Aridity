@@ -26,6 +26,7 @@ namespace Units
         public int Health;
 
         public int Cost;
-
+        
+        public int SkillCellsCount;
     }
 }
