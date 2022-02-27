@@ -3,7 +3,10 @@ guid: d32d941df1d73c741876ca2bb62dc60b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _healthBar: {instanceID: 0}
+  - _skillBar: {instanceID: 0}
+  - _skillCell: {fileID: 1133941123280478919, guid: 477d78020f8204f46999e02264ad8218, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
