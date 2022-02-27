@@ -10,7 +10,13 @@ namespace Battle.Units
 
         private void Awake()
         {
-            _text = GetComponent<TextMeshProUGUI>();   
+            _text = GetComponentInChildren<TextMeshProUGUI>();
+        }
+
+        public void InitializeShield()
+        {
+            if(_text == null) _text.GetComponentInChildren<TextMeshProUGUI>();
+            _text.text = string.Empty;
             _shield = 0; 
             HideShield();
         }

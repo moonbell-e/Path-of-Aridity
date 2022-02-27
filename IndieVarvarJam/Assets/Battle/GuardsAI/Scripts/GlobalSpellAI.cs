@@ -1,27 +1,29 @@
+using Battle.Spells;
+using Battle.Controller;
 using UnityEngine;
-using Battle.Units;
 using Battle.Resolve;
 using System.Collections.Generic;
-using Battle.Controller;
 
-namespace Battle.Spells
+
+namespace Battle.Units.AI
 {
-    public class GlobalSpell : MonoBehaviour
+    public class GlobalSpellAI : MonoBehaviour
     {
+        
         private ResolveBar _resolve;
 
         private void Awake()
         {
             _resolve = FindObjectOfType<ResolveBar>();    
         }
-        
-        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
+
+        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper)
         {
             List<Unit> units = unitsKeeper.Units<Unit>();
             switch(spell.DamageType)
             {
                 case DamageType.Mental:
-                _resolve.ChangeResolve(-spell.Damage);
+                _resolve.ChangeResolve(spell.Damage);
                 break;
 
                 case DamageType.Physical:
@@ -33,13 +35,12 @@ namespace Battle.Spells
                 foreach(Unit unit in units)
                     unit.ChangeHealth(spell.Damage);
                 break;
-                
+
                 case DamageType.Shield:
                 foreach(Unit unit in units)
                     unit.AddShield(spell.Damage);
                 break;
             }
-            stateEvent?.Invoke(true);
         }
     }
 }

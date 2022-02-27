@@ -1,5 +1,299 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7157232260559612012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/click
+  m_EditorClassIdentifier: 
+  Path: event:/UI/click
+  Guid:
+    Data1: -1307929928
+    Data2: 1123645849
+    Data3: -439526997
+    Data4: -1931392138
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 273
+--- !u!114 &-6704639119594478597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/fight
+  m_EditorClassIdentifier: 
+  Name: fight
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6397445315760583365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/poison_rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/poison_rain
+  Guid:
+    Data1: 976141978
+    Data2: 1275335866
+    Data3: 1610367129
+    Data4: 618558256
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &-5952521859057103468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/rain_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/rain_necro
+  Guid:
+    Data1: -1512105492
+    Data2: 1195910521
+    Data3: -837708119
+    Data4: 1383702998
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &-5665164856783869780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/shield_shield
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/shield_shield
+  Guid:
+    Data1: 414382874
+    Data2: 1298987270
+    Data3: 375790506
+    Data4: 377736782
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3956
+--- !u!114 &-5353602756907343540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/ice_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/ice_necro
+  Guid:
+    Data1: -589767819
+    Data2: 1073834635
+    Data3: -129284479
+    Data4: -41937944
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &-5260634532221030777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/necro_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/necro_necro
+  Guid:
+    Data1: -322991729
+    Data2: 1277854780
+    Data3: -1758194765
+    Data4: 1041823237
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &-4634231721452353671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/hover
+  m_EditorClassIdentifier: 
+  Path: event:/UI/hover
+  Guid:
+    Data1: 580599858
+    Data2: 1170295393
+    Data3: 2064680107
+    Data4: 1048875521
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 166
+--- !u!114 &-4585997167540219639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/poison_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/poison_fire
+  Guid:
+    Data1: 1025381169
+    Data2: 1075033515
+    Data3: 1143018145
+    Data4: -902058330
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &-3203779297420644645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/sword_rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/sword_rain
+  Guid:
+    Data1: 1005803667
+    Data2: 1094308299
+    Data3: 1460563845
+    Data4: 1411783985
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3089
+--- !u!114 &-3136918307077106794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/sword_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/sword_necro
+  Guid:
+    Data1: 1638528860
+    Data2: 1155778125
+    Data3: 1307398574
+    Data4: 1869262741
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2702
 --- !u!114 &-2133988693803196954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +321,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 67215
+--- !u!114 &-1971375585447851370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/moving
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/moving
+  Guid:
+    Data1: 146745956
+    Data2: 1120051208
+    Data3: 1540514184
+    Data4: -1032754360
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2099
+--- !u!114 &-1768327673166822518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/rain_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/rain_fire
+  Guid:
+    Data1: -645187453
+    Data2: 1153599875
+    Data3: -892179276
+    Data4: 760148414
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
 --- !u!114 &-1430191479555094341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +399,87 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1324772388817850206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/filactery
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/filactery
+  Guid:
+    Data1: 1886606494
+    Data2: 1331203537
+    Data3: -560211065
+    Data4: -1022229880
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 76
+--- !u!114 &-1244015607012122650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/ice_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/ice_fire
+  Guid:
+    Data1: 1622878386
+    Data2: 1334133537
+    Data3: 1971265931
+    Data4: -1838712621
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &-562887761232637944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/sword_poison
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/sword_poison
+  Guid:
+    Data1: 2029211988
+    Data2: 1157650299
+    Data3: -2078030437
+    Data4: 1020955446
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1831
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,16 +496,431 @@ MonoBehaviour:
   - {fileID: 6974174763509739375}
   - {fileID: 3168748423980658530}
   EditorEvents:
-  - {fileID: 3859317859574356524}
-  - {fileID: 6556355732306650018}
-  - {fileID: -2133988693803196954}
+  - {fileID: 934358273909818226}
+  - {fileID: 3144250161130575725}
+  - {fileID: 3274365276329281508}
+  - {fileID: 5501920151563225422}
+  - {fileID: -5665164856783869780}
+  - {fileID: 3762240762887412805}
+  - {fileID: 888606660786739919}
+  - {fileID: 1103982015130549679}
+  - {fileID: -4585997167540219639}
+  - {fileID: -4634231721452353671}
+  - {fileID: 4810790436639416903}
+  - {fileID: -562887761232637944}
+  - {fileID: -3136918307077106794}
+  - {fileID: -1971375585447851370}
+  - {fileID: -5353602756907343540}
+  - {fileID: -1768327673166822518}
+  - {fileID: 10491994508368658}
+  - {fileID: -5260634532221030777}
+  - {fileID: 777790994837736964}
+  - {fileID: -3203779297420644645}
+  - {fileID: 719194110353563585}
+  - {fileID: 4100009518160599480}
+  - {fileID: 6137534080970148312}
+  - {fileID: -6397445315760583365}
+  - {fileID: 5253842592272815076}
+  - {fileID: -1324772388817850206}
+  - {fileID: 2036169453533769421}
+  - {fileID: 295870630539641399}
+  - {fileID: -1244015607012122650}
+  - {fileID: -7157232260559612012}
+  - {fileID: 8391157360092371141}
+  - {fileID: 1179603123904299732}
+  - {fileID: 957078591862162933}
+  - {fileID: -5952521859057103468}
+  - {fileID: 6302274293402574021}
+  - {fileID: 667888286151966367}
+  - {fileID: 6850654298111336953}
+  - {fileID: 1226627921387556995}
+  - {fileID: 2006084744617308447}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3168748423980658530}
   StringsBanks:
   - {fileID: 6974174763509739375}
-  cacheTime: 637815211149337027
+  cacheTime: 637815325014953705
   cacheVersion: 9
+--- !u!114 &10491994508368658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/shield_rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/shield_rain
+  Guid:
+    Data1: -1313176440
+    Data2: 1293300746
+    Data3: -1070093942
+    Data4: 1492520513
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1494
+--- !u!114 &295870630539641399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/poison_ice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/poison_ice
+  Guid:
+    Data1: -1222366816
+    Data2: 1310727907
+    Data3: -1140258886
+    Data4: -174003631
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &667888286151966367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/ice_ice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/ice_ice
+  Guid:
+    Data1: 1918652408
+    Data2: 1337634722
+    Data3: 1308149948
+    Data4: 160350247
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &719194110353563585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/shield_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/shield_necro
+  Guid:
+    Data1: -1286736749
+    Data2: 1279397638
+    Data3: 1675518390
+    Data4: -1377591180
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &777790994837736964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/rain_rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/rain_rain
+  Guid:
+    Data1: 1398568080
+    Data2: 1129110570
+    Data3: -1507691083
+    Data4: 790606
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &888606660786739919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Roll
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Roll
+  Guid:
+    Data1: -951079643
+    Data2: 1164709664
+    Data3: -193489511
+    Data4: 1372571197
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1245
+--- !u!114 &934358273909818226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/attack
+  Guid:
+    Data1: -1620457470
+    Data2: 1288343548
+    Data3: -1299845719
+    Data4: -1754503708
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2554
+--- !u!114 &957078591862162933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/shield_poison
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/shield_poison
+  Guid:
+    Data1: 830666717
+    Data2: 1267152338
+    Data3: -579342438
+    Data4: 1162250677
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2998
+--- !u!114 &1103982015130549679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music
+  Guid:
+    Data1: 1529119536
+    Data2: 1082510267
+    Data3: -42916704
+    Data4: 1511694707
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6704639119594478597}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 72000
+--- !u!114 &1179603123904299732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/sword_shield
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/sword_shield
+  Guid:
+    Data1: 951927995
+    Data2: 1096892338
+    Data3: -1710565453
+    Data4: 683650827
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2998
+--- !u!114 &1226627921387556995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/sword_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/sword_fire
+  Guid:
+    Data1: 1978343930
+    Data2: 1297325047
+    Data3: 1427042192
+    Data4: 292328650
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2242
+--- !u!114 &2006084744617308447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/lose
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/lose
+  Guid:
+    Data1: 379599358
+    Data2: 1299234736
+    Data3: 1302497419
+    Data4: -1012218736
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1484
+--- !u!114 &2036169453533769421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/win
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/win
+  Guid:
+    Data1: -1474751585
+    Data2: 1261926289
+    Data3: -672262735
+    Data4: -1833266277
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1941
+--- !u!114 &3144250161130575725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/fire_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/fire_necro
+  Guid:
+    Data1: -1465158127
+    Data2: 1322384962
+    Data3: 1517794448
+    Data4: 956162787
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
 --- !u!114 &3168748423980658530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,9 +936,63 @@ MonoBehaviour:
   Path: Assets/FMOD_BANKS/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637815211149306439
+  lastModified: 637815325014927106
   FileSizes: []
   Exists: 1
+--- !u!114 &3274365276329281508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/sword_sword
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/sword_sword
+  Guid:
+    Data1: -816337646
+    Data2: 1106429130
+    Data3: -217375358
+    Data4: 696696522
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 673
+--- !u!114 &3762240762887412805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/sword_ice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/sword_ice
+  Guid:
+    Data1: 411950622
+    Data2: 1312678475
+    Data3: -580569705
+    Data4: -1563512748
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2400
 --- !u!114 &3859317859574356524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +1020,168 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13678
+--- !u!114 &4100009518160599480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/poison_poison
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/poison_poison
+  Guid:
+    Data1: -337643879
+    Data2: 1242717067
+    Data3: -1869095543
+    Data4: 1976464805
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &4810790436639416903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/shield_ice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/shield_ice
+  Guid:
+    Data1: -879869635
+    Data2: 1190285375
+    Data3: 83435687
+    Data4: -2139789013
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &5253842592272815076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/rain_ice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/rain_ice
+  Guid:
+    Data1: 1157231005
+    Data2: 1196812464
+    Data3: -1547495789
+    Data4: 990741318
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &5501920151563225422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/fire_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/fire_fire
+  Guid:
+    Data1: -1483224301
+    Data2: 1249732157
+    Data3: 1565491614
+    Data4: -1914390678
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
+--- !u!114 &6137534080970148312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menu_music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menu_music
+  Guid:
+    Data1: 2102503322
+    Data2: 1306856583
+    Data3: 1072665753
+    Data4: 658407785
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 67215
+--- !u!114 &6302274293402574021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/shield_fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/shield_fire
+  Guid:
+    Data1: 1489654768
+    Data2: 1338554454
+    Data3: -1601324652
+    Data4: 675409276
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
 --- !u!114 &6556355732306650018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +1210,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 72000
+--- !u!114 &6850654298111336953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/combinations/poison_necro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/combinations/poison_necro
+  Guid:
+    Data1: 1903691001
+    Data2: 1218097857
+    Data3: 272979353
+    Data4: -1834754094
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1274
 --- !u!114 &6974174763509739375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,8 +1252,35 @@ MonoBehaviour:
   Path: Assets/FMOD_BANKS/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637815211149337027
+  lastModified: 637815325014953705
   FileSizes:
   - Name: 
-    Value: 1204
+    Value: 2680
   Exists: 1
+--- !u!114 &8391157360092371141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/buy
+  m_EditorClassIdentifier: 
+  Path: event:/UI/buy
+  Guid:
+    Data1: 1476199610
+    Data2: 1174970127
+    Data3: 286636426
+    Data4: 344260592
+  Banks:
+  - {fileID: 3168748423980658530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 297

@@ -1,33 +1,34 @@
 using UnityEngine;
 using Battle.Units;
 using Battle.Controller;
+using Battle.Resolve;
+using System.Collections.Generic;
 
 namespace Battle.Spells
 {
     public class AllEnemySpell : MonoBehaviour
     {
-        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, bool playerCast, SendState stateEvent)
+        private ResolveBar _resolve;
+
+        private void Awake()
         {
-            if(playerCast)
+            _resolve = FindObjectOfType<ResolveBar>();    
+        }
+
+        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
+        {
+            List<Guard> guards = unitsKeeper.Units<Guard>();
+            switch (spell.DamageType)
             {
-                if(spell.DamageType != DamageType.Physical)
-                {
-                    stateEvent?.Invoke(false);
-                    return;
-                }
-                foreach(Guard guard in unitsKeeper.Units<Guard>())
+                case DamageType.Physical:
+                foreach(Guard guard in guards)
                     guard.ChangeHealth(-spell.Damage);
                 stateEvent?.Invoke(true);
-            }
-            else
-            {
-                if(spell.DamageType != DamageType.Physical)
-                {
-                    stateEvent?.Invoke(false);
-                    return;
-                }
-                foreach(Undead undead in unitsKeeper.Units<Undead>())
-                    undead.ChangeHealth(-spell.Damage);
+                break;
+
+                case DamageType.Mental: 
+                _resolve.ChangeResolve(-spell.Damage);
+                break;
             }
         }
     }

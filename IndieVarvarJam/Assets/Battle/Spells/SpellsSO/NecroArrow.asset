@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: NecroArrow
   m_EditorClassIdentifier: 
   _combination:
-  - {fileID: 11400000, guid: f2229f351b80979479d091591b7787ba, type: 2}
   - {fileID: 11400000, guid: c7c9dc421f01b2b478a62f807a1a55e1, type: 2}
-  _damageType: 1
+  - {fileID: 11400000, guid: f2229f351b80979479d091591b7787ba, type: 2}
+  _damageType: 2
   _target: 1
   _damage: 15
   _description: "\u041F\u043E\u043D\u0438\u0436\u0430\u0435\u0442 \u0440\u0435\u0448\u0438\u043C\u043E\u0441\u0442\u044C

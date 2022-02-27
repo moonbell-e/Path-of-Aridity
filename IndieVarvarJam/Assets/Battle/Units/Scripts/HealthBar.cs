@@ -16,6 +16,7 @@ namespace Battle.Units
             _transform = GetComponent<Transform>();
             _slider = GetComponent<Slider>();
             _curHealthText = GetComponentInChildren<TextMeshProUGUI>();    
+            _shieldBar = GetComponentInChildren<ShieldBar>();
         }
 
         public void Initialize(int maxHealth, Vector3 position)
@@ -25,6 +26,7 @@ namespace Battle.Units
             position = Camera.main.WorldToScreenPoint(position);
             position.y -= 75;
             _transform.position = position;
+            _shieldBar.InitializeShield();
             gameObject.SetActive(true);
         }
 

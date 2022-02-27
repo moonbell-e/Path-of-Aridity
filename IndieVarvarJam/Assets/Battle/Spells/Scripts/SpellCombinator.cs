@@ -4,6 +4,7 @@ using Units;
 using UnityEngine.UI;
 using TMPro;
 using Battle.Controller;
+using UnityEditor;
 
 namespace Battle.Spells
 {
@@ -15,7 +16,8 @@ namespace Battle.Spells
         public event ActionDone SpellUsed;
         public event ActionDone SpellCanceled;
         private SpellCaster _spellCaster;
-        private Spell[] _spells;
+        [SerializeField]
+        private List<Spell> _spells;
         [SerializeField]
         private List<Image> _skillImages;
         [SerializeField]
@@ -29,11 +31,22 @@ namespace Battle.Spells
 
         private void Awake() 
         {
-            _spells = Resources.FindObjectsOfTypeAll(typeof(Spell)) as Spell[];
             _spellCaster = FindObjectOfType<SpellCaster>();
             _spellCaster.SpellUseState += ClearSpellData;
             ClearSpellData(false);
             FindObjectOfType<EndTurnButton>().TurnEnded += ClearSpellData;
+        }
+
+        [ContextMenu ("Finf spells")]
+        private void FindSpells()
+        {
+            string[] spellsGUID = AssetDatabase.FindAssets("t:Spell", new[] {"Assets/Battle/Spells/SpellsSO"});
+            List<string> spellPaths = new List<string>();
+            foreach(string GUID in spellsGUID)
+                spellPaths.Add(AssetDatabase.GUIDToAssetPath(GUID));
+            _spells = new List<Spell>();
+            foreach(string path in spellPaths)
+                _spells.Add(AssetDatabase.LoadAssetAtPath(path, typeof(Spell)) as Spell);
         }
 
         public bool SetSkill(UnitSkills skill)
