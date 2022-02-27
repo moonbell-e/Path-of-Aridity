@@ -44,12 +44,12 @@ public class CaravanMover : MonoBehaviour
         }
         else
         {
-            do
+            if (_currentWayPointIndex != 19)
             {
                 _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
             }
-            while (_currentWayPointIndex != 19);
-
+            else
+                _currentWayPointIndex = 0;
         }
 
     }

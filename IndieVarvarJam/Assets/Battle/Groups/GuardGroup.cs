@@ -2,8 +2,9 @@ using Battle.Controller;
 using System.Collections.Generic;
 using UnityEngine;
 using Units;
+#if UNITY_EDITOR //Editor only pre-processor
 using UnityEditor;
-
+#endif 
 namespace Battle.Group
 {
     public class GuardGroup : MonoBehaviour, IBattleEvent
@@ -28,17 +29,17 @@ namespace Battle.Group
             }
         }
 
-        [ContextMenu ("Finf spells")]
-        private void FindSpells()
-        {
-            string[] spellsGUID = AssetDatabase.FindAssets("t:GuardSO", new[] {"Assets/Units/ScriptableObjects/GuardsSO"});
-            List<string> spellPaths = new List<string>();
-            foreach(string GUID in spellsGUID)
-                spellPaths.Add(AssetDatabase.GUIDToAssetPath(GUID));
-            _guardsSO = new List<GuardSO>();
-            foreach(string path in spellPaths)
-                _guardsSO.Add(AssetDatabase.LoadAssetAtPath(path, typeof(GuardSO)) as GuardSO);;
-        }
+        //[ContextMenu ("Finf spells")]
+        //private void FindSpells()
+        //{
+        //    string[] spellsGUID = AssetDatabase.FindAssets("t:GuardSO", new[] {"Assets/Units/ScriptableObjects/GuardsSO"});
+        //    List<string> spellPaths = new List<string>();
+        //    foreach(string GUID in spellsGUID)
+        //        spellPaths.Add(AssetDatabase.GUIDToAssetPath(GUID));
+        //    _guardsSO = new List<GuardSO>();
+        //    foreach(string path in spellPaths)
+        //        _guardsSO.Add(AssetDatabase.LoadAssetAtPath(path, typeof(GuardSO)) as GuardSO);;
+        //}
 
         public void StartBattle(List<LoadUndeadData> loadUndeadsData)
         {
