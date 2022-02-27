@@ -9,13 +9,17 @@ namespace Player
     public class PlayerHandler: MonoBehaviour
     {
         public static PlayerHandler instance;
-        public static int Counter;
         public Transform Units;
 
         private void Start()
         {
+            if (instance != null && instance != this)
+            {
+                Debug.Log("Two!");
+                Destroy(this);
+                return;
+            }
             instance = this;
-            Counter++; if (Counter > 1) Debug.LogError("Two PlayerHandlers on the scene!");
 
         }
         private void Update()

@@ -22,8 +22,13 @@ namespace Units
 
         private void Awake()
         {
+            if (instance != null && instance != this)
+            {
+                Debug.Log("Two!");
+                Destroy(this);
+                return;
+            }
             instance = this;
-            Counter++; if (Counter > 1) Debug.LogError("Two UnitSpawners on the scene!");
 
         }
         public void SpawnRangeUnit()

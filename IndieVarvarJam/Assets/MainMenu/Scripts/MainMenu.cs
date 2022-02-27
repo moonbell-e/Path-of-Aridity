@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour
     [Header("Volume Settings")]
     [SerializeField] private Slider _volumeSlider;
     [SerializeField] private float _defaultVolume = 1.0f;
-    [SerializeField] private AudioMixer _audioMixer;
 
     [Header("Levels To Load")]
     [SerializeField] private string _newGameLevel;
@@ -37,7 +36,6 @@ public class MainMenu : MonoBehaviour
         if(PlayerPrefs.HasKey("NewGameStarted"))
         {
             _playButton.SetActive(true);
-            Destroy(_newGameButton);
         }
 
 
@@ -80,7 +78,6 @@ public class MainMenu : MonoBehaviour
     }
     public void SetVolume(float volume)
     {
-        _audioMixer.SetFloat("Volume", volume);
     }
 
     public void ResetVolume()

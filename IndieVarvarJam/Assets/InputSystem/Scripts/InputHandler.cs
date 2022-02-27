@@ -18,9 +18,13 @@ namespace InputManager
         private void Awake()
         {
             _uiHud = gameObject.GetComponent<UIHud>();
+            if (instance != null && instance != this)
+            {
+                Debug.Log("Two!");
+                Destroy(this);
+                return;
+            }
             instance = this;
-            Counter++; if (Counter > 1) Debug.LogError("Two InputHandlers on the scene!");
-
         }
 
         private void Update()

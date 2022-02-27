@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 86b3722a40a8eee46b09bf07e1d5a1cb, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -981,7 +981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -559.11, y: -291}
+  m_AnchoredPosition: {x: -559.11, y: -423}
   m_SizeDelta: {x: 389.3016, y: 95.1103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202330868
@@ -3016,7 +3016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.89, y: -178.7096}
+  m_AnchoredPosition: {x: 400.89, y: -156}
   m_SizeDelta: {x: 555.77, y: 193.41919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750184329
@@ -3093,7 +3093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -559.11, y: 111}
+  m_AnchoredPosition: {x: -559.11, y: -25}
   m_SizeDelta: {x: 389.3016, y: 95.1103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771725425
@@ -3286,7 +3286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.89, y: -178.7096}
+  m_AnchoredPosition: {x: 400.89, y: -156}
   m_SizeDelta: {x: 555.77, y: 193.41919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795716422
@@ -3765,7 +3765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &887645748
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3783,7 +3783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -559.11, y: 111}
+  m_AnchoredPosition: {x: -559.11, y: 171}
   m_SizeDelta: {x: 389.3016, y: 95.1103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &887645749
@@ -4100,7 +4100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -559.11, y: -91}
+  m_AnchoredPosition: {x: -559.11, y: -223}
   m_SizeDelta: {x: 389.3016, y: 95.1103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932986046
@@ -6050,8 +6050,7 @@ MonoBehaviour:
   _newGameButton: {fileID: 771725423}
   _volumeSlider: {fileID: 112833777}
   _defaultVolume: 1
-  _audioMixer: {fileID: 24100000, guid: 8333f05414cd9e14ea8f3d644dd09766, type: 2}
-  _newGameLevel: SampleScene
+  _newGameLevel: JustWalking
   _qualityDropdown: {fileID: 2123706906}
   _fullScreenToggle: {fileID: 481508469}
   _resolutionDropdown: {fileID: 527449027}
@@ -8575,7 +8574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: CONTINUE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
