@@ -15,14 +15,13 @@ namespace Battle.Spells
             _resolve = FindObjectOfType<ResolveBar>();    
         }
         
-        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, bool playerCast, SendState stateEvent)
+        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
         {
             List<Unit> units = unitsKeeper.Units<Unit>();
             switch(spell.DamageType)
             {
                 case DamageType.Mental:
-                if(playerCast) _resolve.ChangeResolve(-spell.Damage);
-                else _resolve.ChangeResolve(spell.Damage);
+                _resolve.ChangeResolve(-spell.Damage);
                 break;
 
                 case DamageType.Physical:
@@ -34,8 +33,13 @@ namespace Battle.Spells
                 foreach(Unit unit in units)
                     unit.ChangeHealth(spell.Damage);
                 break;
+                
+                case DamageType.Shield:
+                foreach(Unit unit in units)
+                    unit.AddShield(spell.Damage);
+                break;
             }
-            if(playerCast) stateEvent?.Invoke(true);
+            stateEvent?.Invoke(true);
         }
     }
 }

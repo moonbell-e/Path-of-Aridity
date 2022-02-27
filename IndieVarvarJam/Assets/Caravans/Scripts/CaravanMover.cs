@@ -9,7 +9,7 @@ public class CaravanMover : MonoBehaviour
     [SerializeField] private Transform[] _curvePoints;
 
     public List<Vector3> _wayPoints;
-    
+
     private float _step, _speed;
 
     private int _currentWayPointIndex;
@@ -36,7 +36,6 @@ public class CaravanMover : MonoBehaviour
 
     private void Update()
     {
-
         if (_currentWayPointIndex != 19)
         {
             if (Vector3.Distance(_transform.position, _wayPoints[_currentWayPointIndex]) < 0.05f)
@@ -49,5 +48,10 @@ public class CaravanMover : MonoBehaviour
                 _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 }

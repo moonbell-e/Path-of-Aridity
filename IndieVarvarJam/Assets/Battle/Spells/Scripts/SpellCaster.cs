@@ -1,5 +1,6 @@
 using UnityEngine;
 using Battle.Controller;
+using Battle.Units.AI;
 
 namespace Battle.Spells
 {
@@ -13,6 +14,10 @@ namespace Battle.Spells
         private GlobalSpell _globalSpell;
         private AllEnemySpell _allEnemySpell;
         private AllAllySpell _allAllySpell;
+        private SingleSpellAI _singleSpellAI;
+        private GlobalSpellAI _globalSpellAI;
+        private AllEnemySpellAI _allEnemySpellAI;
+        private AllAllySpellAI _allAllySpellAI;
 
         private void Awake()
         {
@@ -21,28 +26,56 @@ namespace Battle.Spells
             _globalSpell = FindObjectOfType<GlobalSpell>();
             _allEnemySpell = FindObjectOfType<AllEnemySpell>();
             _allAllySpell = FindObjectOfType<AllAllySpell>();
+            _singleSpellAI = FindObjectOfType<SingleSpellAI>();    
+            _globalSpellAI = FindObjectOfType<GlobalSpellAI>();
+            _allEnemySpellAI = FindObjectOfType<AllEnemySpellAI>();
+            _allAllySpellAI = FindObjectOfType<AllAllySpellAI>();
         }
 
         public void CastSpell(Spell spell, bool playerCast)
         {
             Debug.Log("Cast spell " + spell.name);
-            switch(spell.Target)
+            if(playerCast)
             {
-                case Target.Single:
-                _singleSpell.CastSpell(spell, _unitsKeeper, playerCast, SpellUseState);
-                break;
+                switch(spell.Target)
+                {
+                    case Target.Single:
+                    _singleSpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                    break;
 
-                case Target.Global:
-                _globalSpell.CastSpell(spell, _unitsKeeper, playerCast, SpellUseState);
-                break;
+                    case Target.Global:
+                    _globalSpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                    break;
 
-                case Target.AllEnemy:
-                _allEnemySpell.CastSpell(spell, _unitsKeeper, playerCast, SpellUseState);
-                break;
+                    case Target.AllEnemy:
+                    _allEnemySpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                    break;
 
-                case Target.AllAlly:
-                _allAllySpell.CastSpell(spell, _unitsKeeper, playerCast, SpellUseState);
-                break;
+                    case Target.AllAlly:
+                    _allAllySpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                    break;
+                }
+            }
+            else
+            {
+                switch(spell.Target)
+                {
+                    case Target.Single:
+                    _singleSpellAI.CastSpell(spell, _unitsKeeper);
+                    break;
+
+                    case Target.Global:
+                    _globalSpellAI.CastSpell(spell, _unitsKeeper);
+                    break;
+
+                    case Target.AllEnemy:
+                    _allEnemySpellAI.CastSpell(spell, _unitsKeeper);
+                    break;
+
+                    case Target.AllAlly:
+                    _allAllySpellAI.CastSpell(spell, _unitsKeeper);
+                    break;
+                }
             }
         }
     }

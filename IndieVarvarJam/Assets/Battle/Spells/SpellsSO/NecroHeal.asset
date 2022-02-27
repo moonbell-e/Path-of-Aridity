@@ -15,7 +15,7 @@ MonoBehaviour:
   _combination:
   - {fileID: 11400000, guid: c7c9dc421f01b2b478a62f807a1a55e1, type: 2}
   - {fileID: 11400000, guid: c7c9dc421f01b2b478a62f807a1a55e1, type: 2}
-  _damageType: 2
+  _damageType: 3
   _target: 3
   _damage: 1
   _description: "\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442

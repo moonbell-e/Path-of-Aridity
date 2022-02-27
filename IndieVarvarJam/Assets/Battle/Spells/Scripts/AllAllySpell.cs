@@ -1,33 +1,28 @@
 using UnityEngine;
 using Battle.Units;
 using Battle.Controller;
+using System.Collections.Generic;
 
 namespace Battle.Spells
 {
     public class AllAllySpell : MonoBehaviour
     {
-        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, bool playerCast, SendState stateEvent)
+        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
         {
-            if(playerCast)
+            List<Undead> undeads = unitsKeeper.Units<Undead>();
+            switch (spell.DamageType)
             {
-                if(spell.DamageType != DamageType.Heal)
-                {
-                    stateEvent?.Invoke(false);
-                    return;
-                }
-                foreach(Undead undead in unitsKeeper.Units<Undead>())
+                case DamageType.Heal:
+                foreach(Undead undead in undeads)
                     undead.ChangeHealth(spell.Damage);
                 stateEvent?.Invoke(true);
-            }
-            else
-            {
-                if(spell.DamageType != DamageType.Heal)
-                {
-                    stateEvent?.Invoke(false);
-                    return;
-                }
-                foreach(Guard guard in unitsKeeper.Units<Guard>())
-                    guard.ChangeHealth(spell.Damage);
+                break;
+
+                case DamageType.Shield:
+                foreach(Undead undead in undeads)
+                    undead.AddShield(spell.Damage);
+                stateEvent?.Invoke(true);
+                break;
             }
         }
     }
