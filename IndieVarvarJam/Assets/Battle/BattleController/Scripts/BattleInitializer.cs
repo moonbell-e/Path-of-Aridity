@@ -17,9 +17,10 @@ namespace Battle.Controller
             _resolveBar = FindObjectOfType<ResolveBar>();
         }
 
-        private void Start()
+        private void Update() 
         {
-            InitializeBattle(_battleData);
+            if(Input.GetKeyDown(KeyCode.R))
+                InitializeBattle(_battleData);
         }
 
         public void InitializeBattle(BattleData battleData)

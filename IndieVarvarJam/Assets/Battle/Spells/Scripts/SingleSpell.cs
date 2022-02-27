@@ -12,37 +12,12 @@ namespace Battle.Spells
         private SendState _stateEvent;
         private bool _needChooseTarget;
 
-        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, bool playerCast, SendState stateEvent)
+        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
         {
-            if(playerCast) 
-            { 
-                _spell = spell;
-                _unitsKeeper = unitsKeeper;
-                _stateEvent = stateEvent;
-                _needChooseTarget = true;
-            }
-            else
-            {
-                if(spell.DamageType == DamageType.Heal)
-                {
-                    List<Guard> guards = unitsKeeper.Units<Guard>();
-                    foreach(Guard guard in guards)
-                        if(guard.MaxHealth == guard.CurHealth) guards.Remove(guard);
-                    if(guards.Count > 0)
-                    {
-                        int index = (Random.Range(0, guards.Count));
-                        guards[index].ChangeHealth(spell.Damage);
-                    }
-                }
-                else
-                {
-                    List<Undead> undeads = unitsKeeper.Units<Undead>();
-                    if(undeads.Count == 0) return;
-                    int index = (Random.Range(0, undeads.Count));
-                    Debug.Log(undeads[index]);
-                    undeads[index].ChangeHealth(-spell.Damage);
-                }
-            }
+            _spell = spell;
+            _unitsKeeper = unitsKeeper;
+            _stateEvent = stateEvent;
+            _needChooseTarget = true;
         }
 
         private void Update()
@@ -61,22 +36,35 @@ namespace Battle.Spells
             Ray ray = Camera.main.ScreenPointToRay(inputPosition);
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit) == false) return;
+            ActivateSpell(hit);
+        }
 
-            if(_spell.DamageType == DamageType.Heal)
+        private void ActivateSpell(RaycastHit hit)
+        {
+            Undead undead = hit.collider.GetComponent<Undead>();
+            Guard guard = hit.collider.GetComponent<Guard>();
+            switch(_spell.DamageType)
             {
-                Undead undead = hit.collider.GetComponent<Undead>();
+                case DamageType.Heal:
                 if(undead == null) return;
                 undead.ChangeHealth(_spell.Damage);
                 _stateEvent?.Invoke(true);
                 _needChooseTarget = false;
-            }
-            else
-            {
-                Guard undead = hit.collider.GetComponent<Guard>();
-                if(undead == null) return;
-                undead.ChangeHealth(-_spell.Damage);
+                break;
+
+                case DamageType.Physical:
+                if(guard == null) return;
+                guard.ChangeHealth(-_spell.Damage);
                 _stateEvent?.Invoke(true);
                 _needChooseTarget = false;
+                break;
+
+                case DamageType.Shield:
+                if(undead == null) return;
+                undead.AddShield(_spell.Damage);
+                _stateEvent?.Invoke(true);
+                _needChooseTarget = false;
+                break;
             }
         }
     }

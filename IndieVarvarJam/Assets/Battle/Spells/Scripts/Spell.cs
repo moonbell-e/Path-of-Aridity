@@ -37,6 +37,7 @@ namespace Battle.Spells
     public enum DamageType
     {
         Physical,
+        Shield,
         Mental,
         Heal
     }
