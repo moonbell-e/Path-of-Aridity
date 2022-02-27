@@ -37,7 +37,6 @@ public class MainMenu : MonoBehaviour
         if(PlayerPrefs.HasKey("NewGameStarted"))
         {
             _playButton.SetActive(true);
-            Destroy(_newGameButton);
         }
 
 
