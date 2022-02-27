@@ -68,10 +68,8 @@ namespace InputManager
                             break;
                         case 7: //Graveyard layer
                             _uiHud.GraveyardShopPanel.SetActive(true);
-                            Debug.Log("Graveyard!");
                             break;
                         case 8: //Caravan layer
-                            Debug.Log("Caravan!");
                             break;
                     }
                 }
