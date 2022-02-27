@@ -15,8 +15,7 @@ namespace Battle.Spells
         public event ActionDone SpellUsed;
         public event ActionDone SpellCanceled;
         private SpellCaster _spellCaster;
-        [SerializeField]
-        private List<Spell> _spells;
+        private Spell[] _spells;
         [SerializeField]
         private List<Image> _skillImages;
         [SerializeField]
@@ -30,6 +29,7 @@ namespace Battle.Spells
 
         private void Awake() 
         {
+            _spells = Resources.FindObjectsOfTypeAll(typeof(Spell)) as Spell[];
             _spellCaster = FindObjectOfType<SpellCaster>();
             _spellCaster.SpellUseState += ClearSpellData;
             ClearSpellData(false);

@@ -7,6 +7,8 @@ namespace Battle.Controller
 {
     public class UnitsKeeper : MonoBehaviour
     {
+        public event ActionHappened UnitsCountChanged;
+        public event ActionHappened LoadEnded;
         private List<UnitData<Undead>> _undeadsData;
         private List<UnitData<Guard>> _guardsData;
 
@@ -26,13 +28,16 @@ namespace Battle.Controller
                 unit.UnitDied += MarkUnitDeath;
         }
 
-        private void Start()
+        private void Start() 
         {
             DeactivateAllUnits();
+            LoadEnded?.Invoke();
         }
 
         public void InitializeUnits(List<LoadUndeadData> loadUndeadDatas, List<LoadGuardData> loadGuardDatas)
         {
+            DeactivateAllUnits();
+
             List<UnitData<Undead>> undeadsData = UnitsData<Undead>();
             foreach(LoadUndeadData LUD in loadUndeadDatas)
             {
@@ -96,12 +101,14 @@ namespace Battle.Controller
                 if(undeadData.Unit == unit) 
                 {
                     undeadData.Active = false;
+                    UnitsCountChanged?.Invoke();
                     return;
                 }
             foreach(UnitData<Guard> guardData in UnitsData<Guard>())
                 if(guardData.Unit == unit) 
                 {
                     guardData.Active = false;
+                    UnitsCountChanged?.Invoke();
                     return;
                 }
         }

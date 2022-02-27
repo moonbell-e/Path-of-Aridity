@@ -3,8 +3,11 @@ using UnityEngine.UI;
 
 namespace Battle.Resolve
 {
+    public delegate void ActionHappened();
+
     public class ResolveBar : MonoBehaviour
     {
+        public event ActionHappened ResolveLost;
         private Slider _resolveBar;
         private int _resolve;
 
@@ -19,7 +22,7 @@ namespace Battle.Resolve
         {
             _resolve = resolve;
             if(_resolve > 100) _resolve = 100;
-            if(_resolve < 0) _resolve = 0;
+            if(_resolve <= 0) _resolve = 1;
             _resolveBar.value = _resolve;
         }
 
@@ -27,7 +30,11 @@ namespace Battle.Resolve
         {
             _resolve += value;
             if(_resolve > 100) _resolve = 100;
-            if(_resolve < 0) _resolve = 0;
+            if(_resolve <= 0)
+            {
+                _resolve = 0;
+                ResolveLost?.Invoke();
+            } 
             _resolveBar.value = _resolve;
         }
     }

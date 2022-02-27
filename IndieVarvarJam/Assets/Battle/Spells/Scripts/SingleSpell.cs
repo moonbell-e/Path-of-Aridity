@@ -39,7 +39,6 @@ namespace Battle.Spells
                     List<Undead> undeads = unitsKeeper.Units<Undead>();
                     if(undeads.Count == 0) return;
                     int index = (Random.Range(0, undeads.Count));
-                    Debug.Log(undeads[index]);
                     undeads[index].ChangeHealth(-spell.Damage);
                 }
             }

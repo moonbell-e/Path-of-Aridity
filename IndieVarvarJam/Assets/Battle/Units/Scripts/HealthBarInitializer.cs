@@ -11,6 +11,10 @@ namespace Battle.Units
         private void Awake()
         {
             _healthBars = FindObjectsOfType<HealthBar>();
+        }
+
+        private void Start() 
+        {
             foreach(HealthBar healthBar in _healthBars)
                 healthBar.HideBar();
         }

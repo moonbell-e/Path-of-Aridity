@@ -26,8 +26,14 @@ namespace Battle.Units
             _healthBar = _healthBarInitializer.InitilizeHealthBar(_maxHealth, _curHealth, transform.position);
         }
 
+        public void AddShield(int value)
+        {
+            _healthBar.AddShield(value);
+        }
+
         public virtual void ChangeHealth(int value)
         {
+            if(value < 0) value = _healthBar.WasteShield(value);
             _curHealth += value;
             if(_curHealth > _maxHealth) _curHealth = _maxHealth;
             if(_curHealth <= 0) Death();
