@@ -62,7 +62,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartingNewGame()
     {
-        //PlayerPrefs.SetInt("AddedResolutions", 1);
+        PlayerPrefs.SetInt("AddedResolutions", 1);
         SceneManager.LoadScene(_newGameLevel);
     }
 
