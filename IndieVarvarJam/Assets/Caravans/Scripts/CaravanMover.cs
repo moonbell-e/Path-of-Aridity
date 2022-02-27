@@ -8,7 +8,7 @@ public class CaravanMover : MonoBehaviour
 
     [SerializeField] private Transform[] _curvePoints;
 
-    [SerializeField] private List<Vector3> _wayPoints;
+    public List<Vector3> _wayPoints;
     
     private float _step, _speed;
 
@@ -18,7 +18,7 @@ public class CaravanMover : MonoBehaviour
 
     private void Awake()
     {
-        _speed = 1f;
+        _speed = 100f;
         _step = 0.05f;
         List<Vector3> curvePoints = new List<Vector3>();
         foreach (Transform trf in _curvePoints)
@@ -36,14 +36,18 @@ public class CaravanMover : MonoBehaviour
 
     private void Update()
     {
-        if(Vector3.Distance(_transform.position, _wayPoints[_currentWayPointIndex]) < 0.05f)
+
+        if (_currentWayPointIndex != 19)
         {
-            _currentWayPointIndex++;
-            return;
-        }
-        else
-        {
-            _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
+            if (Vector3.Distance(_transform.position, _wayPoints[_currentWayPointIndex]) < 0.05f)
+            {
+                _currentWayPointIndex++;
+                return;
+            }
+            else
+            {
+                _transform.position += (_wayPoints[_currentWayPointIndex] - _transform.position) * _speed * Time.deltaTime;
+            }
         }
     }
 }

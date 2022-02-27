@@ -6050,7 +6050,7 @@ MonoBehaviour:
   _newGameButton: {fileID: 771725423}
   _volumeSlider: {fileID: 112833777}
   _defaultVolume: 1
-  _newGameLevel: JustWalking
+  _newGameLevel: TheMainScene
   _qualityDropdown: {fileID: 2123706906}
   _fullScreenToggle: {fileID: 481508469}
   _resolutionDropdown: {fileID: 527449027}
