@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: f0be55308960cbd458b165ffd3137f2e
+guid: 6d60cd9aa68fd7440a68b73c649f8817
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -5921223569576346925
-    second: MH_pose
+      74: -1372435796810906101
+    second: camel_walk
   externalObjects: {}
   materials:
     materialImportMode: 2
