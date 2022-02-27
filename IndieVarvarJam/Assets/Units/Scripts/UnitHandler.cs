@@ -15,8 +15,13 @@ namespace Units
 
         private void Awake()
         {
+            if (instance != null && instance != this)
+            {
+                Debug.Log("Two!");
+                Destroy(this);
+                return;
+            }
             instance = this;
-            Counter++; if (Counter > 1) Debug.LogError("Two UnitHandlers on the scene!");
         }
 
         public (int cost, int health, List<UnitSkills>) GetUnitStats(string type)

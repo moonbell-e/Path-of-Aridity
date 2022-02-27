@@ -13,8 +13,13 @@ public class TooltipHandler : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Debug.Log("Two!");
+            Destroy(this);
+            return;
+        }
         instance = this;
-        Counter++; if (Counter > 1) Debug.LogError("Two TooltipHandlers on the scene!");
     }
 
     public static void ShowTooltip(string content, string header = "")
