@@ -1,11 +1,10 @@
 using Battle.Resolve;
 using UnityEngine;
 using Battle.Units;
-using System.Collections.Generic;
 
 namespace Battle.Controller
 {
-    public class BattleEnder : MonoBehaviour
+    public class BattleReferee : MonoBehaviour
     {
         public event ActionHappened BattleWin;
         public event ActionHappened BattleLose;
