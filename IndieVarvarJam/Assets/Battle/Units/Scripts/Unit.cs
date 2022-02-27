@@ -33,6 +33,7 @@ namespace Battle.Units
 
         public virtual void ChangeHealth(int value)
         {
+            if(_healthBar == null) InitilizeHealth();
             if(value < 0) value = _healthBar.WasteShield(value);
             _curHealth += value;
             if(_curHealth > _maxHealth) _curHealth = _maxHealth;

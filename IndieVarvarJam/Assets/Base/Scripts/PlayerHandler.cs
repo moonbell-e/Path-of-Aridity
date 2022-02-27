@@ -20,11 +20,12 @@ namespace Player
                 return;
             }
             instance = this;
-
+            UnitHandler.instance.SetUnitStats(Units);
         }
+        
         private void Update()
         {
-            UnitHandler.instance.SetUnitStats(Units);
+            
             InputHandler.instance.HandleUnitMovement();
         }
     }

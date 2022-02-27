@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Shield
   m_EditorClassIdentifier: 
   Name: Shield
-  SkillSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  SkillSprite: {fileID: 21300000, guid: 9b75cfd0247495f4a8e7af8349c62616, type: 3}

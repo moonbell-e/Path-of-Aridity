@@ -34,10 +34,10 @@ namespace Battle.Units
             _skillCellsCount = skillCellsCount;
             _skillBar = _skillBarInitializer.InitilizeSkillBar(skillCellsCount, transform.position);
             FindObjectOfType<EndTurnButton>().TurnEnded += RollSkill;
-
             _maxHealth = maxHealth;
             _curHealth = curHealth;
             InitilizeHealth();
+            if(_healthBar == null) InitilizeHealth();
 
             RollSkill();
         }

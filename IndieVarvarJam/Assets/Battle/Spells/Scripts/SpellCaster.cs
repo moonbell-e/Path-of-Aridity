@@ -18,6 +18,7 @@ namespace Battle.Spells
         private GlobalSpellAI _globalSpellAI;
         private AllEnemySpellAI _allEnemySpellAI;
         private AllAllySpellAI _allAllySpellAI;
+        private FMODUnity.EventReference _soundPath;
 
         private void Awake()
         {
@@ -30,11 +31,19 @@ namespace Battle.Spells
             _globalSpellAI = FindObjectOfType<GlobalSpellAI>();
             _allEnemySpellAI = FindObjectOfType<AllEnemySpellAI>();
             _allAllySpellAI = FindObjectOfType<AllAllySpellAI>();
+            SpellUseState += PlaySpellSound;
+        }
+
+        private void PlaySpellSound(bool state)
+        {
+            if(state == false) return;
+            FMODUnity.RuntimeManager.PlayOneShot(_soundPath);
         }
 
         public void CastSpell(Spell spell, bool playerCast)
         {
             Debug.Log("Cast spell " + spell.name);
+            _soundPath = spell.SoundPath;
             if(playerCast)
             {
                 switch(spell.Target)

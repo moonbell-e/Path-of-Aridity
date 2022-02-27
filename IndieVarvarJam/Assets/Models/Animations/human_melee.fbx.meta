@@ -6,7 +6,32 @@ ModelImporter:
   - first:
       74: -4895937632900601984
     second: human_poseMelee
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 916f9fd3dcb599f438d200df69300e8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: f2a1bc7962b68584291bb55de8920a4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: e776335e4f4d26e4299da3f190105737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 4b5d3f4df93d00347b91da7cc301b1af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 1ca9e2f9d6a2f184fa730c72e09b9d0e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

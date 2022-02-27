@@ -12,10 +12,6 @@ namespace Battle.Skills
         private void Awake()
         { 
             _skillBars = FindObjectsOfType<SkillBar>();
-        }
-
-        private void Start() 
-        {
             foreach(SkillBar skillBar in _skillBars)
                 skillBar.HideBar();
         }
@@ -26,6 +22,7 @@ namespace Battle.Skills
             foreach(SkillBar SB in _skillBars)
                 if(SB.gameObject.activeSelf == false)
                 {
+                    Debug.Log(SB);
                     skillBar = SB;
                     break;
                 }

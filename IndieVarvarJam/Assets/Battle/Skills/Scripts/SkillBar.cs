@@ -27,6 +27,7 @@ namespace Battle.Skills
             position = Camera.main.WorldToScreenPoint(position);
             position.y += 75;
             position.x -= 20;
+            if(_transform == null) _transform = GetComponent<Transform>();
             _transform.position = position;
             gameObject.SetActive(true);
         }

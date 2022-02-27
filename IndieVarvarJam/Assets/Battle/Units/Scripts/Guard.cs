@@ -29,6 +29,7 @@ namespace Battle.Units
             _maxHealth = maxHealth;
             _curHealth = maxHealth;
             InitilizeHealth();
+            if(_healthBar == null) InitilizeHealth();
 
             _spells = spells;
             foreach(Spell spell in spells)

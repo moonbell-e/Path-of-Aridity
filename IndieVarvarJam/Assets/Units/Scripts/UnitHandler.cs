@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
+using Battle.Group;
 
 namespace Units
 {
     public class UnitHandler : MonoBehaviour
     {
+        //public event SendUndeadSO UnitSpawned;
         public static UnitHandler instance;
         public static int Counter;
 
@@ -24,7 +26,7 @@ namespace Units
             instance = this;
         }
 
-        public (int cost, int health, List<UnitSkills>) GetUnitStats(string type)
+        public (int cost, int health, List<UnitSkills>, Unit undead) GetUnitStats(string type)
         {
             Unit unit;
             switch(type)
@@ -40,10 +42,10 @@ namespace Units
                     break;
                 default:
                     Debug.Log("Error type");
-                    return (0, 0, null);
+                    return (0, 0, null, null);
 
             }
-            return (unit.Cost, unit.Health, unit.UnitSkills);
+            return (unit.Cost, unit.Health, unit.UnitSkills, unit);
         }
 
         public void SetUnitStats(Transform type)
@@ -57,9 +59,9 @@ namespace Units
                 playerUnit.Cost = stats.cost;
                 playerUnit.Health = stats.health;
                 playerUnit.UnitSkills = stats.Item3;
+                //UnitSpawned?.Invoke(playerUnit.Undead);
             }    
         }
-    
     }
 }
 

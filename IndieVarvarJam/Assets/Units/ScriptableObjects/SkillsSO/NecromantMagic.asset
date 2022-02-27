@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NecromantMagic
   m_EditorClassIdentifier: 
   Name: NecromantMagic
-  SkillSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  SkillSprite: {fileID: 21300000, guid: fe39f3122a1c33849b3497e0bcd4fab9, type: 3}
