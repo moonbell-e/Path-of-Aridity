@@ -3,51 +3,43 @@ using UnityEngine;
 using Battle.Spells;
 using Battle.Resolve;
 using Battle.Controller;
+using Battle.Units;
 
 namespace Battle.Units.AI
 {
     public class GuardSpellSelector : MonoBehaviour
     {
-        private SpellCaster _spellCaster;
-        private ResolveBar _resolveBar;
         [SerializeField]
-        private List<Spell> _availableSpells;
+        private UnitsKeeper _unitsKeeper;
+        [SerializeField]
+        private SpellCaster _spellCaster;
+        [SerializeField]
+        private ResolveBar _resolveBar;
 
         private void Awake()
         {
-            _spellCaster = FindObjectOfType<SpellCaster>();
-            _resolveBar = FindObjectOfType<ResolveBar>();
             FindObjectOfType<EndTurnButton>().TurnEnded += SelectSpell;
-        }
-
-        public void AddSpell(Spell spell)
-        {
-            _availableSpells.Add(spell);
-        }
-
-        public void RemoveSpell(Spell spell)
-        {
-            _availableSpells.Remove(spell);
         }
 
         public void SelectSpell()
         {
-            if(_availableSpells.Count == 0) return;
             int spellCount = SpellCount();
-            for(int i = 0; i < spellCount; i++)
+            List<Guard> guards = _unitsKeeper.Units<Guard>();
+            foreach(Guard guard in guards)
             {
-                int spellIndex = Random.Range(0, _availableSpells.Count);
-                _spellCaster.CastSpell(_availableSpells[spellIndex], false);
+                for(int i = 0; i < spellCount; i++)
+                {
+                    int spellIndex = Random.Range(0, guard.Spells.Count);
+                    _spellCaster.CastSpell(guard.Spells[spellIndex], guard);
+                }
             }
         }
 
         private int SpellCount()
         {
             int resolve = _resolveBar.Resolve;
-            if(resolve <= 30) return 1;
-            else if(resolve < 70) return 2;
-            else if(resolve <= 90) return 3;
-            else return 4;
+            if(resolve <= 60) return 1;
+            else return 2;
         }
     }
 }

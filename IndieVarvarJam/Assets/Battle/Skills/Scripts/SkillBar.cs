@@ -7,17 +7,16 @@ namespace Battle.Skills
 {
     public class SkillBar : MonoBehaviour
     {
+        [SerializeField]
         private Transform _transform;
+        [SerializeField]
         private SpellCombinator _spellCombinator;
         private List<SkillCell> _skillCells= new List<SkillCell>();
-        private bool _active;
 
         public int CellsCount => _skillCells.Count;
 
         private void Awake()
         {
-            _transform = GetComponent<Transform>();
-            _spellCombinator = FindObjectOfType<SpellCombinator>();
             _spellCombinator.SpellUsed += DisableUsedCells;
             _spellCombinator.SpellCanceled += UnselectChoosedCells;
         }

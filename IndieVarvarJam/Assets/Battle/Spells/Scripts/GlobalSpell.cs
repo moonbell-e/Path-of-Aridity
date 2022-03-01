@@ -3,6 +3,7 @@ using Battle.Units;
 using Battle.Resolve;
 using System.Collections.Generic;
 using Battle.Controller;
+using Battle.Effects;
 
 namespace Battle.Spells
 {
@@ -18,6 +19,9 @@ namespace Battle.Spells
         public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
         {
             List<Unit> units = unitsKeeper.Units<Unit>();
+            foreach(Unit u in units)
+                foreach(Effect effect in spell.Effects)
+                    u.AddEffect(effect);
             switch(spell.DamageType)
             {
                 case DamageType.Mental:

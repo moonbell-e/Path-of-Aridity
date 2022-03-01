@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using System.Collections.Generic;
+using Battle.Effects;
 
 namespace Battle.Units
 {
@@ -9,16 +9,32 @@ namespace Battle.Units
     public abstract class Unit : MonoBehaviour
     {
         public event SendUnit UnitDied;
-        private HealthBarInitializer _healthBarInitializer;
+        [SerializeField]
+        protected HealthBarInitializer _healthBarInitializer;
+        protected List<ActivateEffect> _activeEffects;
         protected HealthBar _healthBar;
-        [SerializeField]
         protected int _maxHealth;
-        [SerializeField]
         protected int _curHealth;
 
         public int MaxHealth => _maxHealth;
         public int CurHealth => _curHealth;
+        public List<ActivateEffect> ActiveEffects => _activeEffects;
+
+        protected virtual void Awake()
+        {
+            _activeEffects = new List<ActivateEffect>();
+        }
         
+        public void AddEffect(Effect effect)
+        {
+            _activeEffects.Add(new ActivateEffect(effect));
+        }
+
+        public void RemoveEffect(ActivateEffect effect)
+        {
+            _activeEffects.Remove(effect);
+        }
+
         protected void InitilizeHealth()
         {
             if(_healthBarInitializer == null) 
@@ -33,7 +49,6 @@ namespace Battle.Units
 
         public virtual void ChangeHealth(int value)
         {
-            if(_healthBar == null) InitilizeHealth();
             if(value < 0) value = _healthBar.WasteShield(value);
             _curHealth += value;
             if(_curHealth > _maxHealth) _curHealth = _maxHealth;
@@ -52,6 +67,28 @@ namespace Battle.Units
         {
             if(_healthBar != null) _healthBar.HideBar();
             gameObject.SetActive(false);
+        }
+    }
+
+    public struct ActivateEffect
+    {
+        private Effect _effect;
+        private int _remainingTurns;
+
+        public Effect Effect => _effect;
+        public int RemainingTurns => _remainingTurns;
+
+        public bool EffectEnded()
+        {
+            _remainingTurns--;
+            if(_remainingTurns <= 0) return false;
+            else return true;
+        }
+
+        public ActivateEffect(Effect effect)
+        {
+            _effect = effect;
+            _remainingTurns = effect.Duration;
         }
     }
 }

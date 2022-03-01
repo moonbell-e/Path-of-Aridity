@@ -18,6 +18,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 20a22d9be8f15eb41b42db3524c438ad, type: 2}
   - {fileID: 11400000, guid: 5f57ea8aa0d782248ad1ae56433b6255, type: 2}
   - {fileID: 11400000, guid: c7c9dc421f01b2b478a62f807a1a55e1, type: 2}
-  Health: 5
+  Health: 10
   Cost: 20
   SkillCellsCount: 3

@@ -6,18 +6,14 @@ namespace Battle.Units
 {
     public class HealthBar : MonoBehaviour
     {
+        [SerializeField]
         private Transform _transform;
+        [SerializeField]
         private ShieldBar _shieldBar;
+        [SerializeField]
         private Slider _slider;
+        [SerializeField]
         private TextMeshProUGUI _curHealthText;
-
-        private void Awake()
-        {
-            _transform = GetComponent<Transform>();
-            _slider = GetComponent<Slider>();
-            _curHealthText = GetComponentInChildren<TextMeshProUGUI>();    
-            _shieldBar = GetComponentInChildren<ShieldBar>();
-        }
 
         public void Initialize(int maxHealth, Vector3 position)
         {

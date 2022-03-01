@@ -1,6 +1,7 @@
 using UnityEngine;
 using Battle.Controller;
 using Battle.Units.AI;
+using Battle.Units;
 
 namespace Battle.Spells
 {
@@ -40,51 +41,50 @@ namespace Battle.Spells
             FMODUnity.RuntimeManager.PlayOneShot(_soundPath);
         }
 
-        public void CastSpell(Spell spell, bool playerCast)
+        public void CastSpell(Spell spell)
         {
             Debug.Log("Cast spell " + spell.name);
             _soundPath = spell.SoundPath;
-            if(playerCast)
+            switch(spell.Target)
             {
-                switch(spell.Target)
-                {
-                    case Target.Single:
-                    _singleSpell.CastSpell(spell, _unitsKeeper, SpellUseState);
-                    break;
+                case Target.Single:
+                _singleSpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                break;
 
-                    case Target.Global:
-                    _globalSpell.CastSpell(spell, _unitsKeeper, SpellUseState);
-                    break;
+                case Target.Global:
+                _globalSpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                break;
 
-                    case Target.AllEnemy:
-                    _allEnemySpell.CastSpell(spell, _unitsKeeper, SpellUseState);
-                    break;
+                case Target.AllEnemy:
+                _allEnemySpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                break;
 
-                    case Target.AllAlly:
-                    _allAllySpell.CastSpell(spell, _unitsKeeper, SpellUseState);
-                    break;
-                }
+                case Target.AllAlly:
+                _allAllySpell.CastSpell(spell, _unitsKeeper, SpellUseState);
+                break;
             }
-            else
+        }
+
+        public void CastSpell(Spell spell, Guard guard)
+        {
+            Debug.Log("Cast spell " + spell.name);
+            switch(spell.Target)
             {
-                switch(spell.Target)
-                {
-                    case Target.Single:
-                    _singleSpellAI.CastSpell(spell, _unitsKeeper);
-                    break;
+                case Target.Single:
+                _singleSpellAI.CastSpell(spell, _unitsKeeper, guard);
+                break;
 
-                    case Target.Global:
-                    _globalSpellAI.CastSpell(spell, _unitsKeeper);
-                    break;
+                case Target.Global:
+                _globalSpellAI.CastSpell(spell, _unitsKeeper, guard);
+                break;
 
-                    case Target.AllEnemy:
-                    _allEnemySpellAI.CastSpell(spell, _unitsKeeper);
-                    break;
+                case Target.AllEnemy:
+                _allEnemySpellAI.CastSpell(spell, _unitsKeeper, guard);
+                break;
 
-                    case Target.AllAlly:
-                    _allAllySpellAI.CastSpell(spell, _unitsKeeper);
-                    break;
-                }
+                case Target.AllAlly:
+                _allAllySpellAI.CastSpell(spell, _unitsKeeper, guard);
+                break;
             }
         }
     }

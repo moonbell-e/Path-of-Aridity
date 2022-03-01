@@ -7,11 +7,8 @@ namespace Battle.Controller
 {
     public class BattleData : MonoBehaviour
     {
-        [SerializeField]
         private int _startResolve;
-        [SerializeField]
         private List<LoadUndeadData> _loadUndeadsData;
-        [SerializeField]
         private List<LoadGuardData> _loadGuardsData;
 
         public int StartResolve => _startResolve;
@@ -32,12 +29,12 @@ namespace Battle.Controller
         [SerializeField]
         protected Mesh _mesh;
         [SerializeField]
-        protected Material _material;
+        protected Material[] _materials;
         [SerializeField]
         protected int _maxHealth;
 
         public Mesh Mesh => _mesh;
-        public Material Material => _material;
+        public Material[] Materials => _materials;
         public int MaxHealth => _maxHealth;
     }
 
@@ -55,10 +52,10 @@ namespace Battle.Controller
         public int SkillCellsCount => _skillCellsCount;
         public int CurHealth => _curHealth;
 
-        public LoadUndeadData(Mesh mesh, Material material, int maxHealth, int curHealth, List<UnitSkills> skills, int skillCellsCount)
+        public LoadUndeadData(Mesh mesh, Material[] materials, int maxHealth, int curHealth, List<UnitSkills> skills, int skillCellsCount)
         {
             _mesh = mesh;
-            _material = material;
+            _materials = materials;
             _maxHealth = maxHealth;
             _curHealth = curHealth;
             _skills = skills;
@@ -74,10 +71,10 @@ namespace Battle.Controller
 
         public List<Spell> Spells => _spells;
 
-        public LoadGuardData(Mesh mesh, Material material, int maxHealth, List<Spell> spells)
+        public LoadGuardData(Mesh mesh, Material[] materials, int maxHealth, List<Spell> spells)
         {
             _mesh = mesh;
-            _material = material;
+            _materials = materials;
             _maxHealth = maxHealth;
             _spells = spells;
         }

@@ -43,15 +43,15 @@ namespace Battle.Group
 
         public void StartBattle(List<LoadUndeadData> loadUndeadsData)
         {
-            BattleData battleData = new BattleData();
+            BattleData battleData = FindObjectOfType<BattleData>();
             battleData.InitializeBattleData(50, loadUndeadsData, _loadGuardsData);
             BattleEventStarted.Invoke(battleData); 
         }
 
         public void AddGuard(GuardSO guard)
         {
-            _loadGuardsData.Add(new LoadGuardData(guard.UnitPrefab.GetComponent<MeshFilter>().sharedMesh,
-            guard.UnitPrefab.GetComponent<MeshRenderer>().sharedMaterial, guard.Health, guard.UnitSkills));
+            _loadGuardsData.Add(new LoadGuardData(guard.UnitPrefab.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh,
+            guard.UnitPrefab.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterials, guard.Health, guard.UnitSkills));
         }
 
         public void ClearGroup()

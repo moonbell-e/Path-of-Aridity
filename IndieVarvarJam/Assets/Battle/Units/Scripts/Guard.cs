@@ -7,23 +7,25 @@ namespace Battle.Units
 {
     public class Guard : Unit
     {
+        [SerializeField]
         private GuardSpellSelector _spellSelector;
         [SerializeField]
-        private List<Spell> _spells; 
         private MeshFilter _meshFilter;
+        [SerializeField]
         private MeshRenderer _meshRenderer;
+        private List<Spell> _spells; 
+        
+        public List<Spell> Spells => _spells;
 
-        private void Awake()
+        protected override void Awake()
         {
-            _spellSelector = FindObjectOfType<GuardSpellSelector>();
-            _meshFilter = GetComponent<MeshFilter>();
-            _meshRenderer = GetComponent<MeshRenderer>();
+            base.Awake();
         }
 
-        public void Initialize(Mesh mesh, Material material, int maxHealth, List<Spell> spells)
+        public void Initialize(Mesh mesh, Material[] materials, int maxHealth, List<Spell> spells)
         {
             _meshFilter.mesh = mesh;
-            _meshRenderer.material = material;
+            _meshRenderer.materials = materials;
             gameObject.SetActive(true);
 
             _maxHealth = maxHealth;
@@ -32,8 +34,6 @@ namespace Battle.Units
             if(_healthBar == null) InitilizeHealth();
 
             _spells = spells;
-            foreach(Spell spell in spells)
-                _spellSelector.AddSpell(spell);
         }
 
         public override void ChangeHealth(int value)
@@ -43,8 +43,6 @@ namespace Battle.Units
 
         protected override void Death()
         {
-            foreach(Spell spell in _spells)
-                _spellSelector.RemoveSpell(spell);
             base.Death();
         }
 

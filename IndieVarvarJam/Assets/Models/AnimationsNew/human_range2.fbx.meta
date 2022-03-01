@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 4ff49a87d7263bb46a014759058814b1
+guid: 99b49dfa14b8a1040a5cf68953b344da
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -4895937632900601984
-    second: human_poseMelee
+      74: -2885796350153036536
+    second: human_poseRange
   externalObjects: {}
   materials:
     materialImportMode: 2

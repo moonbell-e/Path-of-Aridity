@@ -83,7 +83,7 @@ namespace Battle.Spells
         public void CastSpell()
         {
             if(_curSpell == null) return;
-            _spellCaster.CastSpell(_curSpell, true);
+            _spellCaster.CastSpell(_curSpell);
         }
 
         private void CheckCombination()
