@@ -9,11 +9,6 @@ namespace Battle.Units
         private TextMeshProUGUI _text;
         private int _shield;
 
-        private void Awake()
-        {
-            _text = GetComponentInChildren<TextMeshProUGUI>();
-        }
-
         public void InitializeShield()
         {
             _text.text = string.Empty;

@@ -4,6 +4,7 @@ using Units;
 using Battle.Skills;
 using System.Linq;
 using FMODUnity;
+using Battle.Effects;
 
 namespace Battle.Spells
 {
@@ -18,6 +19,8 @@ namespace Battle.Spells
         private Target _target;
         [SerializeField]
         private int _damage;
+        [SerializeField]
+        private List<Effect> _effects;
         [SerializeField] [TextArea (5, 10)]
         private string _description;
         [SerializeField] 
@@ -26,6 +29,7 @@ namespace Battle.Spells
         public DamageType DamageType => _damageType;
         public Target Target => _target;
         public int Damage => _damage;
+        public List<Effect> Effects => _effects;
         public string Description => _description;
         public EventReference SoundPath => _soundPath;
         

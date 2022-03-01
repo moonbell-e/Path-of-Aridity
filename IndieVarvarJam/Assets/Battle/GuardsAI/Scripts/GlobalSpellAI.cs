@@ -3,7 +3,7 @@ using Battle.Controller;
 using UnityEngine;
 using Battle.Resolve;
 using System.Collections.Generic;
-
+using Battle.Effects;
 
 namespace Battle.Units.AI
 {
@@ -17,9 +17,12 @@ namespace Battle.Units.AI
             _resolve = FindObjectOfType<ResolveBar>();    
         }
 
-        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper)
+        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, Guard guardian)
         {
             List<Unit> units = unitsKeeper.Units<Unit>();
+            foreach(Unit u in units)
+                foreach(Effect effect in spell.Effects)
+                    u.AddEffect(effect);
             switch(spell.DamageType)
             {
                 case DamageType.Mental:

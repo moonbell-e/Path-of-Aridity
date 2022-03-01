@@ -3,6 +3,7 @@ using Battle.Controller;
 using UnityEngine;
 using System.Collections.Generic;
 using Battle.Resolve;
+using Battle.Effects;
 
 namespace Battle.Units.AI
 {
@@ -15,9 +16,12 @@ namespace Battle.Units.AI
             _resolve = FindObjectOfType<ResolveBar>();    
         }
 
-        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper)
+        public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, Guard guardian)
         {
             List<Guard> guards = unitsKeeper.Units<Guard>();
+            foreach(Guard gu in guards)
+                foreach(Effect effect in spell.Effects)
+                    gu.AddEffect(effect);
             switch (spell.DamageType)
             {
                 case DamageType.Heal:

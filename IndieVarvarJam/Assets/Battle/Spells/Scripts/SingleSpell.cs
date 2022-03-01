@@ -1,7 +1,7 @@
 using UnityEngine;
-using System.Collections.Generic;
 using Battle.Units;
 using Battle.Controller;
+using Battle.Effects;
 
 namespace Battle.Spells
 {
@@ -48,6 +48,8 @@ namespace Battle.Spells
                 case DamageType.Heal:
                 if(undead == null) return;
                 undead.ChangeHealth(_spell.Damage);
+                foreach(Effect effect in _spell.Effects)
+                    undead.AddEffect(effect);
                 _stateEvent?.Invoke(true);
                 _needChooseTarget = false;
                 break;
@@ -55,6 +57,8 @@ namespace Battle.Spells
                 case DamageType.Physical:
                 if(guard == null) return;
                 guard.ChangeHealth(-_spell.Damage);
+                foreach(Effect effect in _spell.Effects)
+                    guard.AddEffect(effect);
                 _stateEvent?.Invoke(true);
                 _needChooseTarget = false;
                 break;
@@ -62,6 +66,8 @@ namespace Battle.Spells
                 case DamageType.Shield:
                 if(undead == null) return;
                 undead.AddShield(_spell.Damage);
+                foreach(Effect effect in _spell.Effects)
+                    undead.AddEffect(effect);
                 _stateEvent?.Invoke(true);
                 _needChooseTarget = false;
                 break;

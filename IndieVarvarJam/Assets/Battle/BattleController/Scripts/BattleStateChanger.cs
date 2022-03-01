@@ -14,8 +14,6 @@ namespace Battle.Controller
         private Camera _battleCamera;
         [SerializeField]
         private Camera _worldCamera;
-        [SerializeField]
-        private BattleData _battleData;
         private PauseManager _pauseManager;
         private UnitsKeeper _unitsKeeper;
         private ResolveBar _resolveBar;
@@ -46,16 +44,7 @@ namespace Battle.Controller
             _battleWindow.SetActive(false);
             _pauseManager.ResumeClicked();
         }
-
-        private void Update() 
-        {
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                InitializeBattle(_battleData);
-                FindObjectOfType<SpellCombinator>().ClearSpellData(false);
-            }
-        }
-
+        
         public void InitializeBattle(BattleData battleData)
         {
             _pauseManager.PauseClicked();

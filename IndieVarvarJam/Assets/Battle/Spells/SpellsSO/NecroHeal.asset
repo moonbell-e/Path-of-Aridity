@@ -18,6 +18,8 @@ MonoBehaviour:
   _damageType: 3
   _target: 3
   _damage: 1
+  _effects:
+  - {fileID: 11400000, guid: 45511953bc584234f9999fb603e5f999, type: 2}
   _description: "\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442
     1 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0432\u0441\u0435\u043C \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430\u043C."
   _soundPath:

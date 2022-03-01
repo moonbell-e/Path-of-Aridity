@@ -8,26 +8,25 @@ namespace Battle.Units
 {
     public class Undead : Unit
     {
+        [SerializeField]
+        private MeshFilter _meshFilter;
+        [SerializeField]
+        private MeshRenderer _meshRenderer;
+        [SerializeField]
         private SkillBarInitializer _skillBarInitializer;
         private SkillBar _skillBar;
-        [SerializeField]
         private List<UnitSkills> _skills;
-        [SerializeField]
         private int _skillCellsCount;
-        private MeshFilter _meshFilter;
-        private MeshRenderer _meshRenderer;
 
-        private void Awake()
+        protected override void Awake()
         {
-            _skillBarInitializer = FindObjectOfType<SkillBarInitializer>();
-            _meshFilter = GetComponent<MeshFilter>();
-            _meshRenderer = GetComponent<MeshRenderer>();
+            base.Awake();
         }
 
-        public void Initialize(Mesh mesh, Material material, int maxHealth, int curHealth, List<UnitSkills> skills, int skillCellsCount)
+        public void Initialize(Mesh mesh, Material[] materials, int maxHealth, int curHealth, List<UnitSkills> skills, int skillCellsCount)
         {
             _meshFilter.mesh = mesh;
-            _meshRenderer.material = material;
+            _meshRenderer.materials = materials;
             gameObject.SetActive(true);
             
             _skills = skills;

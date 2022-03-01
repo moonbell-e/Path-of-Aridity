@@ -3,6 +3,7 @@ using Battle.Units;
 using Battle.Controller;
 using Battle.Resolve;
 using System.Collections.Generic;
+using Battle.Effects;
 
 namespace Battle.Spells
 {
@@ -18,6 +19,9 @@ namespace Battle.Spells
         public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
         {
             List<Guard> guards = unitsKeeper.Units<Guard>();
+            foreach(Guard gu in guards)
+                foreach(Effect effect in spell.Effects)
+                    gu.AddEffect(effect);
             switch (spell.DamageType)
             {
                 case DamageType.Physical:

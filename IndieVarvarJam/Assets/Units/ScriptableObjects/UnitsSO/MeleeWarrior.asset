@@ -17,6 +17,6 @@ MonoBehaviour:
   UnitSkills:
   - {fileID: 11400000, guid: a994e0060b43a054c83637669ee06d7c, type: 2}
   - {fileID: 11400000, guid: 661d599f8a277704e8ec5459c4f9b975, type: 2}
-  Health: 3
+  Health: 6
   Cost: 5
   SkillCellsCount: 2

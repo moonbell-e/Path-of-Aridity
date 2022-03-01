@@ -21,7 +21,7 @@ namespace Battle.Group
         public void AddUndead(Unit undead)
         {
             _loadUndeadsData.Add(new LoadUndeadData(undead.UnitPrefab.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh,
-            undead.UnitPrefab.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterial, undead.Health, undead.Health, undead.UnitSkills, undead.SkillCellsCount));
+            undead.UnitPrefab.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterials, undead.Health, undead.Health, undead.UnitSkills, undead.SkillCellsCount));
         }
 
         public void ClearUndeads()

@@ -2,6 +2,7 @@ using UnityEngine;
 using Battle.Units;
 using Battle.Controller;
 using System.Collections.Generic;
+using Battle.Effects;
 
 namespace Battle.Spells
 {
@@ -10,6 +11,9 @@ namespace Battle.Spells
         public void CastSpell(Spell spell, UnitsKeeper unitsKeeper, SendState stateEvent)
         {
             List<Undead> undeads = unitsKeeper.Units<Undead>();
+            foreach(Undead un in undeads)
+                foreach(Effect effect in spell.Effects)
+                    un.AddEffect(effect);
             switch (spell.DamageType)
             {
                 case DamageType.Heal:

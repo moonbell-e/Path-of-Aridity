@@ -1,12 +1,42 @@
 fileFormatVersion: 2
-guid: fd2457cc4f76ce742ba79c65d28bd307
+guid: 64829651483495b438c05fecf8dfae66
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -2885796350153036536
-    second: human_poseRange
-  externalObjects: {}
+      74: -4895937632900601984
+    second: human_poseMelee
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 859f40ca73541e540b70f35fdd5df338, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 84502e7e6f44b9740aae8fb1061801e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: c63390d275e61634db0c825f923eb1ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: d0cbfd60eb2f8304fbbd2af0b686afb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.047
+    second: {fileID: 2100000, guid: 3c419a013826a034e8bfae889bbba059, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.048
+    second: {fileID: 2100000, guid: cfd653b151ec85a4da22269c698d433c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

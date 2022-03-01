@@ -55,7 +55,7 @@ namespace Battle.Controller
                     Debug.LogError("Undeads load error!");
                     break;
                 }
-                undeadData.Unit.Initialize(LUD.Mesh, LUD.Material, LUD.MaxHealth, LUD.CurHealth, LUD.Skills, LUD.SkillCellsCount);
+                undeadData.Unit.Initialize(LUD.Mesh, LUD.Materials, LUD.MaxHealth, LUD.CurHealth, LUD.Skills, LUD.SkillCellsCount);
                 undeadData.Active = true;
             }
 
@@ -76,7 +76,7 @@ namespace Battle.Controller
                     Debug.LogError("Guards load error!");
                     break;
                 }
-                guardData.Unit.Initialize(LGD.Mesh, LGD.Material, LGD.MaxHealth, LGD.Spells);
+                guardData.Unit.Initialize(LGD.Mesh, LGD.Materials, LGD.MaxHealth, LGD.Spells);
                 guardData.Active = true;
             }
         }
