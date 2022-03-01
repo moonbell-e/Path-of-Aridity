@@ -25,16 +25,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
     private Resolution[] _resolutions;
 
-
-    private FMOD.Studio.Bus masterBus;
-    private FMOD.Studio.Bus musicVca;
-    private FMOD.Studio.Bus dialogsBus;
-
-    private FMOD.Studio.Bus UIBus;
-    private FMOD.Studio.Bus voiceBus;
-    private FMOD.Studio.Bus ambienceBus;
-
-
     private int _qualityLevel;
     private bool _isFullScreen;
 
@@ -63,10 +53,6 @@ public class MainMenu : MonoBehaviour
             _resolutionDropdown.RefreshShownValue();
         }
     }
-
-
-
-
     public void StartingNewGame()
     {
         PlayerPrefs.SetInt("AddedResolutions", 1);
@@ -86,9 +72,6 @@ public class MainMenu : MonoBehaviour
     {
         _volumeSlider.value = _defaultVolume;
     }
-
-
-
     public void SetQuality(int qualityIndex)
     {
         _qualityLevel = qualityIndex;
@@ -119,19 +102,4 @@ public class MainMenu : MonoBehaviour
         Screen.SetResolution(_currentResolution.width, _currentResolution.height, Screen.fullScreen);
         _resolutionDropdown.value = _resolutions.Length;
     }
-
-    public void SetVolume()
-    {
-        float masterBus = musicVolumeSlider.value;
-        masterBus.setVolume(masterBus);
-        PlayerPrefs.SetFloat("musicVolume", masterBus);
-        PlayerPrefs.Save();
-    }
-
-    public void GetVolume()
-    {
-        float musicVolume = PlayerPrefs.GetFloat("musicVolume", 0.5f);
-        musicVolumeSlider.value = musicVolume;
-    }
-
 }
