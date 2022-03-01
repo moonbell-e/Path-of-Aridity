@@ -29,7 +29,7 @@ namespace Battle.Group
             }
         }
 
-        //[ContextMenu ("Finf spells")]
+        //[ContextMenu ("Find spells")]
         //private void FindSpells()
         //{
         //    string[] spellsGUID = AssetDatabase.FindAssets("t:GuardSO", new[] {"Assets/Units/ScriptableObjects/GuardsSO"});
@@ -50,8 +50,8 @@ namespace Battle.Group
 
         public void AddGuard(GuardSO guard)
         {
-            _loadGuardsData.Add(new LoadGuardData(guard.UnitPrefab.GetComponent<MeshFilter>().mesh,
-            guard.UnitPrefab.GetComponent<MeshRenderer>().material, guard.Health, guard.UnitSkills));
+            _loadGuardsData.Add(new LoadGuardData(guard.UnitPrefab.GetComponent<MeshFilter>().sharedMesh,
+            guard.UnitPrefab.GetComponent<MeshRenderer>().sharedMaterial, guard.Health, guard.UnitSkills));
         }
 
         public void ClearGroup()

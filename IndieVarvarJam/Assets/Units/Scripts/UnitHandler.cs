@@ -8,7 +8,7 @@ namespace Units
 {
     public class UnitHandler : MonoBehaviour
     {
-        //public event SendUndeadSO UnitSpawned;
+        public event SendUndeadSO UnitSpawned;
         public static UnitHandler instance;
         public static int Counter;
 
@@ -59,7 +59,7 @@ namespace Units
                 playerUnit.Cost = stats.cost;
                 playerUnit.Health = stats.health;
                 playerUnit.UnitSkills = stats.Item3;
-                //UnitSpawned?.Invoke(playerUnit.Undead);
+                    UnitSpawned?.Invoke(stats.undead);
             }    
         }
     }

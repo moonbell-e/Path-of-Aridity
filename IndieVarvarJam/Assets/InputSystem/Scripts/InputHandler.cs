@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Player;
 using UIPresenter;
+using Battle.Group;
 namespace InputManager
 {
     public class InputHandler : MonoBehaviour
@@ -15,8 +16,10 @@ namespace InputManager
 
         private List<GameObject> _selectedUnits = new List<GameObject>();
 
+        private UndeadGroup _undeadGroup;
         private void Awake()
         {
+            _undeadGroup = FindObjectOfType<UndeadGroup>();
             _uiHud = gameObject.GetComponent<UIHud>();
             if (instance != null && instance != this)
             {
@@ -70,6 +73,12 @@ namespace InputManager
                             _uiHud.GraveyardShopPanel.SetActive(true);
                             break;
                         case 8: //Caravan layer
+                            Debug.Log(_hit.collider.GetComponentInParent<GuardGroup>());
+                            Debug.Log(_hit.collider);
+
+                            Debug.Log(_undeadGroup.LoadUndeadsData);
+
+                            _hit.collider.GetComponentInParent<GuardGroup>().StartBattle(_undeadGroup.LoadUndeadsData);
                             break;
                     }
                 }

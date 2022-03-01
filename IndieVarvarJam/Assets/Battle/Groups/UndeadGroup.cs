@@ -5,19 +5,23 @@ using Battle.Controller;
 
 namespace Battle.Group
 {
+    public delegate void SendUndeadSO(Unit undead);
     public class UndeadGroup : MonoBehaviour
     {
         private List<LoadUndeadData> _loadUndeadsData;
 
+        public List<LoadUndeadData> LoadUndeadsData => _loadUndeadsData;
+
         private void Awake()
         {
-            _loadUndeadsData = new List<LoadUndeadData>();    
+            _loadUndeadsData = new List<LoadUndeadData>();
+            FindObjectOfType<UnitHandler>().UnitSpawned += AddUndead;
         }
 
         public void AddUndead(Unit undead)
         {
-            _loadUndeadsData.Add(new LoadUndeadData(undead.UnitPrefab.GetComponent<MeshFilter>().mesh,
-            undead.UnitPrefab.GetComponent<MeshRenderer>().material, undead.Health, undead.Health, undead.UnitSkills, undead.SkillCellsCount));
+            _loadUndeadsData.Add(new LoadUndeadData(undead.UnitPrefab.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh,
+            undead.UnitPrefab.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterial, undead.Health, undead.Health, undead.UnitSkills, undead.SkillCellsCount));
         }
 
         public void ClearUndeads()

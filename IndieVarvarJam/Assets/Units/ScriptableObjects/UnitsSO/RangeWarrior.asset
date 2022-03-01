@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RangeWarrior
   m_EditorClassIdentifier: 
   Type: 0
-  UnitPrefab: {fileID: 1107723504076233926, guid: b441693850afe0b4ab0bf3ecbf898e35, type: 3}
+  UnitPrefab: {fileID: 2093694627741485559, guid: ee63821ef312d224f94bf5243a01a306, type: 3}
   UnitSkills:
   - {fileID: 11400000, guid: 3fdd42582fe20234eba5d898445d0bf5, type: 2}
   - {fileID: 11400000, guid: f2229f351b80979479d091591b7787ba, type: 2}

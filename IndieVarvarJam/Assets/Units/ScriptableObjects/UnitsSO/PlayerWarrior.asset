@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerWarrior
   m_EditorClassIdentifier: 
   Type: 2
-  UnitPrefab: {fileID: 5633919113941348336, guid: 99b61bf265f3d6248bf9432ee4aff180, type: 3}
+  UnitPrefab: {fileID: 3146909219147701575, guid: 23b47bc635d779541b2f8ba83b8b1aee, type: 3}
   UnitSkills:
   - {fileID: 11400000, guid: 20a22d9be8f15eb41b42db3524c438ad, type: 2}
   - {fileID: 11400000, guid: 5f57ea8aa0d782248ad1ae56433b6255, type: 2}
