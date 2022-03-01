@@ -73,12 +73,10 @@ namespace InputManager
                             _uiHud.GraveyardShopPanel.SetActive(true);
                             break;
                         case 8: //Caravan layer
-                            Debug.Log(_hit.collider.GetComponentInParent<GuardGroup>());
-                            Debug.Log(_hit.collider);
-
-                            Debug.Log(_undeadGroup.LoadUndeadsData);
-
-                            _hit.collider.GetComponentInParent<GuardGroup>().StartBattle(_undeadGroup.LoadUndeadsData);
+                            if (Vector3.Distance(_selectedUnits[0].transform.position, _hit.collider.transform.position) < 20f)
+                            {
+                                _hit.collider.GetComponentInParent<GuardGroup>().StartBattle(_undeadGroup.LoadUndeadsData);
+                            }
                             break;
                     }
                 }

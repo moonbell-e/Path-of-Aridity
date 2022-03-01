@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
@@ -26,6 +24,15 @@ public class MainMenu : MonoBehaviour
     [Header("Resolution Dropdowns")]
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
     private Resolution[] _resolutions;
+
+
+    private FMOD.Studio.Bus masterBus;
+    private FMOD.Studio.Bus musicVca;
+    private FMOD.Studio.Bus dialogsBus;
+
+    private FMOD.Studio.Bus UIBus;
+    private FMOD.Studio.Bus voiceBus;
+    private FMOD.Studio.Bus ambienceBus;
 
 
     private int _qualityLevel;
@@ -111,6 +118,20 @@ public class MainMenu : MonoBehaviour
         Resolution _currentResolution = Screen.currentResolution;
         Screen.SetResolution(_currentResolution.width, _currentResolution.height, Screen.fullScreen);
         _resolutionDropdown.value = _resolutions.Length;
+    }
+
+    public void SetVolume()
+    {
+        float masterBus = musicVolumeSlider.value;
+        masterBus.setVolume(masterBus);
+        PlayerPrefs.SetFloat("musicVolume", masterBus);
+        PlayerPrefs.Save();
+    }
+
+    public void GetVolume()
+    {
+        float musicVolume = PlayerPrefs.GetFloat("musicVolume", 0.5f);
+        musicVolumeSlider.value = musicVolume;
     }
 
 }
