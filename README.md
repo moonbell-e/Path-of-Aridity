@@ -1,4 +1,6 @@
 # IndieVarvarJam
+[Ссылка на проект в itch.io](https://gufelniza.itch.io/path-of-aridity)
+
 ## EN
 
 Breathtaking game where you can rob caravans and make your all dreams come true.
