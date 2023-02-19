@@ -3,17 +3,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using FMOD;
+using FMODUnity;
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject _playButton;
-    [SerializeField] private GameObject _newGameButton;
-
-
-    [Header("Volume Settings")]
-    [SerializeField] private Slider _volumeSlider;
-    [SerializeField] private float _defaultVolume = 1.0f;
-
     [Header("Levels To Load")]
     [SerializeField] private string _newGameLevel;
 
@@ -25,14 +18,16 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
     private Resolution[] _resolutions;
 
+    [Header("Volume Settings")]
+    private FMOD.Studio.VCA _vcaController;
 
-    private FMOD.Studio.Bus masterBus;
-    private FMOD.Studio.Bus musicVca;
-    private FMOD.Studio.Bus dialogsBus;
+    public string VcaName;
 
-    private FMOD.Studio.Bus UIBus;
-    private FMOD.Studio.Bus voiceBus;
-    private FMOD.Studio.Bus ambienceBus;
+    private Slider _slider;
+
+    
+
+
 
 
     private int _qualityLevel;
@@ -53,7 +48,6 @@ public class MainMenu : MonoBehaviour
             {
                 string _option = _resolutions[i].width + " x " + _resolutions[i].height + " " + _resolutions[i].refreshRate + " Hz";
                 _options.Add(_option);
-                Debug.Log("Added");
                 if (_resolutions[i].width == Screen.width && _resolutions[i].height == Screen.height)
                     _currentResolutionIndex = i;
             }
@@ -62,6 +56,10 @@ public class MainMenu : MonoBehaviour
             _resolutionDropdown.value = _currentResolutionIndex;
             _resolutionDropdown.RefreshShownValue();
         }
+
+        //_vcaController = FMODUnity.RuntimeManager.GetVCA("vca:/" + VcaName);
+        _slider = GetComponent<Slider>();
+
     }
 
 
@@ -75,16 +73,7 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Exit game");
         Application.Quit();
-    }
-    public void SetVolume(float volume)
-    {
-    }
-
-    public void ResetVolume()
-    {
-        _volumeSlider.value = _defaultVolume;
     }
 
 
@@ -120,18 +109,8 @@ public class MainMenu : MonoBehaviour
         _resolutionDropdown.value = _resolutions.Length;
     }
 
-    public void SetVolume()
+    public void SetVolume(float volume)
     {
-        float masterBus = musicVolumeSlider.value;
-        masterBus.setVolume(masterBus);
-        PlayerPrefs.SetFloat("musicVolume", masterBus);
-        PlayerPrefs.Save();
+        _vcaController.setVolume(volume);
     }
-
-    public void GetVolume()
-    {
-        float musicVolume = PlayerPrefs.GetFloat("musicVolume", 0.5f);
-        musicVolumeSlider.value = musicVolume;
-    }
-
 }

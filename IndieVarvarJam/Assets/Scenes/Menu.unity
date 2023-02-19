@@ -6001,14 +6001,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9826a018ca3626b44a8f41236905a540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playButton: {fileID: 0}
-  _newGameButton: {fileID: 0}
-  _volumeSlider: {fileID: 112833777}
-  _defaultVolume: 1
   _newGameLevel: TheMainScene
   _qualityDropdown: {fileID: 2123706906}
   _fullScreenToggle: {fileID: 481508469}
   _resolutionDropdown: {fileID: 527449027}
+  VcaName: Master
 --- !u!4 &1431306665
 Transform:
   m_ObjectHideFlags: 0
