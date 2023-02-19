@@ -3,13 +3,13 @@
 
 Breathtaking game where you can rob caravans and make your all dreams come true.
 
-HOW TO PLAY: Buy units and go near to caravans to rob them (press left button of the mouse), press right button of the mouse to go. Join the battle with the caravans.  You can win carefully reading the cards and learning effects.
+HOW TO PLAY: Buy units and go near to caravans to rob them press left button of the mouse, press right button of the mouse to go. Join the battle with the caravans.  You can win carefully reading the cards and learning effects.
 
 ## RUS
 
 Захватывающая игра, в которой вы можете грабить караваны и воплощать все свои мечты в реальность.
 
-КАК ИГРАТЬ: Покупайте юнитов и подходите близко к караванам, чтобы ограбить их (нажмите левую кнопку мыши), нажмите правую кнопку мыши, чтобы идти. Вступайте в бой с караванами. Чтобы победить, внимательно читайте карточки и изучайте эффекты.
+КАК ИГРАТЬ: Покупайте юнитов и подходите близко к караванам, чтобы ограбить их нажмите левую кнопку мыши, нажмите правую кнопку мыши, чтобы идти. Вступайте в бой с караванами. Чтобы победить, внимательно читайте карточки и изучайте эффекты.
 
 
 
